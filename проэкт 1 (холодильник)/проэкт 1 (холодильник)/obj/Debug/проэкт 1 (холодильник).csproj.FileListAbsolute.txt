@@ -1,0 +1,14 @@
+C:\Users\79297\source\repos\проэкт 1 (холодильник)\проэкт 1 (холодильник)\bin\Debug\проэкт 1 (холодильник).exe.config
+C:\Users\79297\source\repos\проэкт 1 (холодильник)\проэкт 1 (холодильник)\bin\Debug\проэкт 1 (холодильник).exe
+C:\Users\79297\source\repos\проэкт 1 (холодильник)\проэкт 1 (холодильник)\bin\Debug\проэкт 1 (холодильник).pdb
+C:\Users\79297\source\repos\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\проэкт 1 (холодильник).csprojAssemblyReference.cache
+C:\Users\79297\source\repos\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\проэкт_1__холодильник_.Properties.Resources.resources
+C:\Users\79297\source\repos\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\проэкт_1__холодильник_.Главная.resources
+C:\Users\79297\source\repos\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\проэкт 1 (холодильник).csproj.GenerateResource.cache
+C:\Users\79297\source\repos\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\проэкт 1 (холодильник).csproj.CoreCompileInputs.cache
+C:\Users\79297\source\repos\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\проэкт 1 (холодильник).exe
+C:\Users\79297\source\repos\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\проэкт 1 (холодильник).pdb
+C:\Users\79297\source\repos\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\проэкт_1__холодильник_.Просрочка.resources
+C:\Users\79297\source\repos\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\проэкт_1__холодильник_.Колличество.resources
+C:\Users\79297\source\repos\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\проэкт_1__холодильник_.Содержимое.resources
+C:\Users\79297\source\repos\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\проэкт_1__холодильник_.Техсост.resources

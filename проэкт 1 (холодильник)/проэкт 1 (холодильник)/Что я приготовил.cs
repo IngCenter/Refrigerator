@@ -10,22 +10,21 @@ using System.Windows.Forms;
 
 namespace проэкт_1__холодильник_
 {
-    public partial class Техсост : Form
+    public partial class Что_я_приготовил : Form
     {
-        public Техсост()
+        public Что_я_приготовил()
         {
             InitializeComponent();
         }
 
-        private void Техсост_Load(object sender, EventArgs e)
+        private void Что_я_приготовил_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void textBox7_TextChanged(object sender, EventArgs e)
         {
-            Сервисы f = new Сервисы();
-            f.ShowDialog();
+
         }
     }
 }

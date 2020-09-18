@@ -44,5 +44,17 @@ namespace проэкт_1__холодильник_
             Техсост f = new Техсост();
             f.ShowDialog();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form1 f = new Form1();
+            f.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Что_я_приготовил f = new Что_я_приготовил();
+            f.ShowDialog();
+        }
     }
 }

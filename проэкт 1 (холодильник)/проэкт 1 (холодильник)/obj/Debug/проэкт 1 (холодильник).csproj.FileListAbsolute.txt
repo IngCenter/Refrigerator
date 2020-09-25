@@ -15,3 +15,19 @@ C:\Users\79297\source\repos\проэкт 1 (холодильник)\проэкт
 C:\Users\79297\source\repos\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\проэкт_1__холодильник_.Form1.resources
 C:\Users\79297\source\repos\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\проэкт_1__холодильник_.Что_я_приготовил.resources
 C:\Users\79297\source\repos\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\проэкт_1__холодильник_.Сервисы.resources
+C:\Users\Даниел\Desktop\Refrigerator-master\проэкт 1 (холодильник)\проэкт 1 (холодильник)\bin\Debug\проэкт 1 (холодильник).exe.config
+C:\Users\Даниел\Desktop\Refrigerator-master\проэкт 1 (холодильник)\проэкт 1 (холодильник)\bin\Debug\проэкт 1 (холодильник).exe
+C:\Users\Даниел\Desktop\Refrigerator-master\проэкт 1 (холодильник)\проэкт 1 (холодильник)\bin\Debug\проэкт 1 (холодильник).pdb
+C:\Users\Даниел\Desktop\Refrigerator-master\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\проэкт 1 (холодильник).csprojAssemblyReference.cache
+C:\Users\Даниел\Desktop\Refrigerator-master\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\Fridgerator.Сервисы.resources
+C:\Users\Даниел\Desktop\Refrigerator-master\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\Fridgerator.AddProducts.resources
+C:\Users\Даниел\Desktop\Refrigerator-master\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\проэкт_1__холодильник_.Properties.Resources.resources
+C:\Users\Даниел\Desktop\Refrigerator-master\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\Fridgerator.Main.resources
+C:\Users\Даниел\Desktop\Refrigerator-master\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\Fridgerator.Просрочка.resources
+C:\Users\Даниел\Desktop\Refrigerator-master\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\Fridgerator.Содержимое.resources
+C:\Users\Даниел\Desktop\Refrigerator-master\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\Fridgerator.Техсост.resources
+C:\Users\Даниел\Desktop\Refrigerator-master\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\Fridgerator.CookingRecipes.resources
+C:\Users\Даниел\Desktop\Refrigerator-master\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\проэкт 1 (холодильник).csproj.GenerateResource.cache
+C:\Users\Даниел\Desktop\Refrigerator-master\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\проэкт 1 (холодильник).csproj.CoreCompileInputs.cache
+C:\Users\Даниел\Desktop\Refrigerator-master\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\проэкт 1 (холодильник).exe
+C:\Users\Даниел\Desktop\Refrigerator-master\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\проэкт 1 (холодильник).pdb

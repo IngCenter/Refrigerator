@@ -1,4 +1,4 @@
-﻿namespace проэкт_1__холодильник_
+﻿namespace Fridgerator
 {
     partial class Сервисы
     {

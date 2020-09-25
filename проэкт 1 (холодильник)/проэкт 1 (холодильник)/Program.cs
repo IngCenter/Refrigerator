@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace проэкт_1__холодильник_
+namespace Fridgerator
 {
     static class Program
     {
@@ -16,7 +16,7 @@ namespace проэкт_1__холодильник_
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Главная());
+            Application.Run(new Main());
         }
     }
 }

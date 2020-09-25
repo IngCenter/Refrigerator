@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace проэкт_1__холодильник_
+namespace Fridgerator
 {
     public partial class Сервисы : Form
     {

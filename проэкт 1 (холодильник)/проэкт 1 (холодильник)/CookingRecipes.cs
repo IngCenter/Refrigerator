@@ -10,14 +10,19 @@ using System.Windows.Forms;
 
 namespace Fridgerator
 {
-    public partial class Содержимое : Form
+    public partial class CookingRecipes : Form
     {
-        public Содержимое()
+        public CookingRecipes()
         {
             InitializeComponent();
         }
 
-        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void Что_я_приготовил_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox7_TextChanged(object sender, EventArgs e)
         {
 
         }

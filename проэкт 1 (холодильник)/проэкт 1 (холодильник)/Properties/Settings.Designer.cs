@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace проэкт_1__холодильник_.Properties
+namespace Fridgerator.Properties
 {
 
 

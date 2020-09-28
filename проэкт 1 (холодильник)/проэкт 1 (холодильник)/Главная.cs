@@ -5,15 +5,59 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace проэкт_1__холодильник_
 {
+
+    public struct Product
+    {
+        public string name;
+        public string category;
+        public int count;
+        public DateTime dateBegin;
+        public DateTime dateEnd;
+
+
+
+        public Product(string _name, string _category, int _count)
+        {
+            name = _name;
+            category = _category;
+            count = _count;
+            dateBegin = DateTime.Now;
+            dateEnd = dateBegin.AddDays(2);
+        }
+
+
+        public DateTime TimeToDie()
+        {
+            return
+            DateTime.FromBinary(dateEnd.ToBinary() - dateBegin.ToBinary());
+        }
+    }
+
+
     public partial class Главная : Form
     {
+
+        public static List<Product> product_list = new List<Product>();
+
         public Главная()
         {
+            product_list.Add(new Product("Лимонный сок", "Напитки", 1));
+            product_list.Add(new Product("Сырокопченая колбаса", "Колбаса", 2));
+            product_list.Add(new Product("Сырки ЧУДО", "Глазированные сырки", 7));
+            product_list.Add(new Product("Спрайт", "Напитки", 2));
+            product_list.Add(new Product("Крабовые палочки", "Морепродукты", 5));
+            product_list.Add(new Product("Яйца", "Яйца", 10));
+            product_list.Add(new Product("Грудка из курицы", "Мясо", 1));
+            product_list.Add(new Product("Фарш из свинины", "Мясо", 2));
+            product_list.Add(new Product("Фарш из говядины", "Мясо", 1));
+            product_list.Add(new Product("Бекон/полоска", "Мясо", 5));
+
             InitializeComponent();
         }
 

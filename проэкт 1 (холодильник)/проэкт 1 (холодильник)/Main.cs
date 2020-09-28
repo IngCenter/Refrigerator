@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,7 +13,7 @@ namespace Fridgerator
 {
     public partial class Main : Form
     {
-        public static List<Product> product_list = new List<Product>();
+        public static List<Product> ProductList = new List<Product>();
 
         public Main()
         {
@@ -21,15 +22,37 @@ namespace Fridgerator
 
         private void Главная_Load(object sender, EventArgs e)
         {
+            LoadSave();
+        }
+        
+        private void LoadSave()
+        {
+            string[] lines = File.ReadAllLines("Save.txt");
 
+            foreach(string line in lines)
+            {
+                string[] product = line.Split(new string[1] { ", " }, StringSplitOptions.None);
+                string[] dateTime = product[3].Split('.');
+                ProductList.Add(new Product(product[0], product[1], int.Parse(product[2]), DateTime.Parse(product[3])));
+            }
+        }
+
+        private void SaveSave()
+        {
+            List<string> lines = new List<string>();
+
+            foreach (Product product in ProductList)
+                lines.Add(product.Name + ", " + product.Category + ", " + product.DateBegin.ToString("d"));
+
+            File.WriteAllLines("Save.txt", lines);
         }
 
         private void CountButton_Click(object sender, EventArgs e)
         {
             int count = 0;
 
-            foreach (var product in product_list)
-                count += product.count;
+            foreach (var product in ProductList)
+                count += product.Count;
 
             MessageBox.Show("Количество: " + count, "Количество продуктов");
         }
@@ -42,7 +65,7 @@ namespace Fridgerator
 
         private void button3_Click(object sender, EventArgs e)
         {
-            if (product_list.Count == 0)
+            if (ProductList.Count == 0)
             {
                 MessageBox.Show("НАКОРМИ МЕНЯ", "ХАЧУ ЖАРАТЬ");
 
@@ -70,28 +93,33 @@ namespace Fridgerator
             CookingRecipes f = new CookingRecipes();
             f.ShowDialog();
         }
+
+        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            SaveSave();
+        }
     }
 
     public struct Product
     {
-        public string name;
-        public string category;
-        public int count;
-        public DateTime dateBegin;
-        public DateTime dateEnd;
+        public string Name;
+        public string Category;
+        public int Count;
+        public DateTime DateBegin;
+        public DateTime DateEnd;
 
-        public Product(string _name, string _category, int _count)
+        public Product(string name, string category, int count, DateTime dateBegin)
         {
-            name = _name;
-            category = _category;
-            count = _count;
-            dateBegin = DateTime.Now;
-            dateEnd = dateBegin.AddDays(2);
+            Name = name;
+            Category = category;
+            Count = count;
+            DateBegin = dateBegin;
+            DateEnd = DateBegin.AddDays(2);
         }
 
         public DateTime TimeToDie()
         {
-            return DateTime.FromBinary(dateEnd.ToBinary() - dateBegin.ToBinary());
+            return DateTime.FromBinary(DateEnd.ToBinary() - DateBegin.ToBinary());
         }
     }
 }

@@ -15,6 +15,24 @@ namespace проэкт_1__холодильник_
         public Колличество()
         {
             InitializeComponent();
+
+            int y = 100;
+            foreach (Product product in Главная.product_list)
+            {
+                Label lbl = new Label();
+                lbl.Location = new Point(100, y);
+                lbl.Text = product.name;
+                Controls.Add(lbl);
+
+
+                Label lbl2 = new Label();
+                lbl2.Location = new Point(250, y);
+                lbl2.Text = product.count.ToString();
+                Controls.Add(lbl2);
+
+                y = y + 35;
+            }
+
         }
 
         private void Колличество_Load(object sender, EventArgs e)

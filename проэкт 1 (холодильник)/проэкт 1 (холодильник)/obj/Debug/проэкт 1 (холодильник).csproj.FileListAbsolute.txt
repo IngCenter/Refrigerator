@@ -47,3 +47,5 @@ C:\Users\Даниел\source\repos\Refrigerator\проэкт 1 (холодиль
 C:\Users\Даниел\source\repos\Refrigerator\проэкт 1 (холодильник)\проэкт 1 (холодильник)\bin\Debug\проэкт 1 (холодильник).exe.config
 C:\Users\Даниел\source\repos\Refrigerator\проэкт 1 (холодильник)\проэкт 1 (холодильник)\bin\Debug\проэкт 1 (холодильник).exe
 C:\Users\Даниел\source\repos\Refrigerator\проэкт 1 (холодильник)\проэкт 1 (холодильник)\bin\Debug\проэкт 1 (холодильник).pdb
+C:\Users\Даниел\source\repos\Refrigerator\проэкт 1 (холодильник)\проэкт 1 (холодильник)\bin\Debug\MySql.Data.dll
+C:\Users\Даниел\source\repos\Refrigerator\проэкт 1 (холодильник)\проэкт 1 (холодильник)\obj\Debug\проэкт 1 (холодильник).csproj.CopyComplete

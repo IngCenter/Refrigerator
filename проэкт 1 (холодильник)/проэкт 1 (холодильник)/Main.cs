@@ -3,11 +3,13 @@ using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Common;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace Fridgerator
 {
@@ -18,11 +20,30 @@ namespace Fridgerator
         public Main()
         {
             InitializeComponent();
+
+            // Connection String.
+            string connString = "Server=VH287.spaceweb.ru;" +
+                ";Database= beavisabra_holod" +
+                ";port=3306;User Id=beavisabra_holod;password=Beavis1989";
+
+            MySqlConnection conn = new MySqlConnection(connString);
+
+            conn.Open();
+
+            MySqlCommand command = new MySqlCommand("SELECT * FROM Product", conn);
+
+            DbDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                ProductList.Add(new Product(reader.GetString(0), reader.GetString(1), reader.GetInt32(3), reader.GetDateTime(2)));
+            }
+
+            conn.Close();
         }
 
         private void Главная_Load(object sender, EventArgs e)
         {
-            LoadSave();
+            //LoadSave();
         }
         
         private void LoadSave()
@@ -32,7 +53,6 @@ namespace Fridgerator
             foreach(string line in lines)
             {
                 string[] product = line.Split(new string[1] { ", " }, StringSplitOptions.None);
-                string[] dateTime = product[3].Split('.');
                 ProductList.Add(new Product(product[0], product[1], int.Parse(product[2]), DateTime.Parse(product[3])));
             }
         }
@@ -42,7 +62,7 @@ namespace Fridgerator
             List<string> lines = new List<string>();
 
             foreach (Product product in ProductList)
-                lines.Add(product.Name + ", " + product.Category + ", " + product.DateBegin.ToString("d"));
+                lines.Add(product.Name + ", " + product.Category + ", " + product.Count + ", " + product.DateBegin.ToString("d"));
 
             File.WriteAllLines("Save.txt", lines);
         }
@@ -96,7 +116,7 @@ namespace Fridgerator
 
         private void Main_FormClosed(object sender, FormClosedEventArgs e)
         {
-            SaveSave();
+            //SaveSave();
         }
     }
 

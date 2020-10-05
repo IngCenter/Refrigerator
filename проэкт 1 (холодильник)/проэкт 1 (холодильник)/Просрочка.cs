@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace проэкт_1__холодильник_
+namespace Fridgerator
 {
     public partial class Просрочка : Form
     {
@@ -18,16 +18,16 @@ namespace проэкт_1__холодильник_
 
             
             int y = 100;
-            foreach (Product product in Главная.product_list)
+            foreach (Product product in Main.ProductList)
             {
                 Label lbl = new Label();
                 lbl.Location = new Point(100, y);
-                lbl.Text = product.name;
+                lbl.Text = product.Name;
                 Controls.Add(lbl);
 
                 Label lbl2 = new Label();
                 lbl2.Location = new Point(250, y);
-                lbl2.Text = product.count.ToString();
+                lbl2.Text = product.Count.ToString();
                 Controls.Add(lbl2);
 
                 y = y + 35;

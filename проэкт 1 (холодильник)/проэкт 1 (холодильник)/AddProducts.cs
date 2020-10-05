@@ -22,16 +22,11 @@ namespace Fridgerator
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private int y = 60;
+
+        private void AddLine_Click(object sender, EventArgs e)
         {
-
-        }
-
-        int y = 60;
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-            y = y + 35;
+            y += 35;
 
           /*
            * Button btn = new Button();
@@ -56,7 +51,6 @@ namespace Fridgerator
             tb.Size = new Size(187, 20);
 
             Controls.Add(tb);
-
         }
     }
 }

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Fridgerator
 {
-    public partial class Содержимое : Form
+    public partial class Contents : Form
     {
-        public Содержимое()
+        public Contents()
         {
             InitializeComponent();
         }

@@ -48,7 +48,7 @@
             this.numericUpDown1.Location = new System.Drawing.Point(376, 79);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(57, 22);
+            this.numericUpDown1.Size = new System.Drawing.Size(52, 22);
             this.numericUpDown1.TabIndex = 12;
             // 
             // button1
@@ -56,24 +56,23 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(660, 190);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "button1";
+            this.button1.Name = "AddProducts";
             this.button1.Size = new System.Drawing.Size(248, 122);
             this.button1.TabIndex = 24;
             this.button1.Text = "Добавить всё";
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(660, 79);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
+            this.button2.Name = "AddLine";
             this.button2.Size = new System.Drawing.Size(248, 57);
             this.button2.TabIndex = 25;
             this.button2.Text = "Добавить новую строку";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.button2.Click += new System.EventHandler(this.AddLine_Click);
             // 
             // AddProducts
             // 

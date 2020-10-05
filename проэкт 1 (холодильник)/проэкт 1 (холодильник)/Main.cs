@@ -41,32 +41,6 @@ namespace Fridgerator
             conn.Close();
         }
 
-        private void Главная_Load(object sender, EventArgs e)
-        {
-            //LoadSave();
-        }
-        
-        private void LoadSave()
-        {
-            string[] lines = File.ReadAllLines("Save.txt");
-
-            foreach(string line in lines)
-            {
-                string[] product = line.Split(new string[1] { ", " }, StringSplitOptions.None);
-                ProductList.Add(new Product(product[0], product[1], int.Parse(product[2]), DateTime.Parse(product[3])));
-            }
-        }
-
-        private void SaveSave()
-        {
-            List<string> lines = new List<string>();
-
-            foreach (Product product in ProductList)
-                lines.Add(product.Name + ", " + product.Category + ", " + product.Count + ", " + product.DateBegin.ToString("d"));
-
-            File.WriteAllLines("Save.txt", lines);
-        }
-
         private void CountButton_Click(object sender, EventArgs e)
         {
             int count = 0;
@@ -77,13 +51,13 @@ namespace Fridgerator
             MessageBox.Show("Количество: " + count, "Количество продуктов");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void DeadProducts_Click(object sender, EventArgs e)
         {
-            Просрочка f = new Просрочка();
+            DeadProducts f = new DeadProducts();
             f.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Contents_Click(object sender, EventArgs e)
         {
             if (ProductList.Count == 0)
             {
@@ -92,13 +66,13 @@ namespace Fridgerator
                 return;
             }
 
-            Содержимое f = new Содержимое();
+            Contents f = new Contents();
             f.ShowDialog();
         }
 
         private void Fridge_Click(object sender, EventArgs e)
         {
-            Техсост f = new Техсост();
+            Condition f = new Condition();
             f.ShowDialog();
         }
 
@@ -112,11 +86,6 @@ namespace Fridgerator
         {
             CookingRecipes f = new CookingRecipes();
             f.ShowDialog();
-        }
-
-        private void Main_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            //SaveSave();
         }
     }
 

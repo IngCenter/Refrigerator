@@ -1,6 +1,6 @@
 ﻿namespace Fridgerator
 {
-    partial class Содержимое
+    partial class Contents
     {
         /// <summary>
         /// Required designer variable.

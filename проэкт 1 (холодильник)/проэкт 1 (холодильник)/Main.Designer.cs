@@ -126,6 +126,7 @@
             this.MinimumSize = new System.Drawing.Size(572, 364);
             this.Name = "Main";
             this.Text = "Панель управления";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
             this.ResumeLayout(false);
 
         }

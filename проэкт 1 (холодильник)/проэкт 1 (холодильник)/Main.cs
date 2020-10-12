@@ -17,28 +17,24 @@ namespace Fridgerator
     {
         public static List<Product> ProductList = new List<Product>();
 
+        public static MySqlConnection Connection;
+
         public Main()
         {
-            InitializeComponent();
-
-            // Connection String.
             string connString = "Server=VH287.spaceweb.ru;" +
                 ";Database= beavisabra_holod" +
                 ";port=3306;User Id=beavisabra_holod;password=Beavis1989";
 
-            MySqlConnection conn = new MySqlConnection(connString);
+            Connection = new MySqlConnection(connString);
 
-            conn.Open();
+            Connection.Open();
 
-            MySqlCommand command = new MySqlCommand("SELECT * FROM Product", conn);
+            List<string> products = Select("SELECT * FROM Products");
 
-            DbDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                ProductList.Add(new Product(reader.GetString(0), reader.GetString(1), reader.GetInt32(3), reader.GetDateTime(2)));
-            }
+            for (int i = 0; i < products.Count; i += 5)
+                ProductList.Add(new Product(products[i], DateTime.Parse(products[i + 1]), int.Parse(products[i + 2]), products[i + 3], int.Parse(products[i + 4])));
 
-            conn.Close();
+            InitializeComponent();
         }
 
         private void CountButton_Click(object sender, EventArgs e)
@@ -87,28 +83,46 @@ namespace Fridgerator
             CookingRecipes f = new CookingRecipes();
             f.ShowDialog();
         }
+
+        public static List<string> Select(string Text)
+        {
+            //Результат
+            List<string> results = new List<string>();
+            //Создать команду
+            MySqlCommand command = new MySqlCommand(Text, Connection);
+            //Выполнить команду
+            DbDataReader reader = command.ExecuteReader();
+
+            while (reader.Read())
+                for (int i = 0; i < reader.FieldCount; i++)
+                    results.Add(reader.GetValue(i).ToString());
+
+            reader.Close();
+
+            return results;
+        }
+
+        private void Main_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Connection.Close();
+        }
     }
 
     public struct Product
     {
         public string Name;
-        public string Category;
-        public int Count;
         public DateTime DateBegin;
-        public DateTime DateEnd;
+        public int LifeTime;
+        public string Unit;
+        public int Count;
 
-        public Product(string name, string category, int count, DateTime dateBegin)
+        public Product(string name, DateTime dateBegin, int lifeTime, string unit, int count)
         {
             Name = name;
-            Category = category;
-            Count = count;
             DateBegin = dateBegin;
-            DateEnd = DateBegin.AddDays(2);
-        }
-
-        public DateTime TimeToDie()
-        {
-            return DateTime.FromBinary(DateEnd.ToBinary() - DateBegin.ToBinary());
+            LifeTime = lifeTime;
+            Unit = unit;
+            Count = count;
         }
     }
 }

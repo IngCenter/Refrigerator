@@ -14,29 +14,48 @@ namespace Fridgerator
     {
         public DeadProducts()
         {
-            int y = 100;
+            int x = 10;
 
-            foreach (Product product in Main.ProductList)
+            //Все испорченные продукты
+            List<string> dead = Program.Select("SELECT * FROM Products" +
+                " WHERE DATEDIFF(CURDATE(), DateBegin) > LifeTime");
+
+            //Тут 5 столбцов
+            for (int i = 0; i < dead.Count; i += 5)
             {
+                //0-Название, 4 - Количество
                 Label nameLabel = new Label
                 {
-                    Location = new Point(100, y),
-                    Text = product.Name
+                    AutoSize = false,
+                    Font = new Font("Arial", 12),
+                    Location = new Point(x, 30),
+                    Size = new Size(125, 30),
+                    Text = dead[i],
+                    TextAlign = ContentAlignment.MiddleCenter
                 };
                 
                 Label countLabel = new Label
                 {
-                    Location = new Point(250, y),
-                    Text = product.Count.ToString()
+                    AutoSize = false,
+                    Font = new Font("Arial", 12),
+                    Location = new Point(x, 100),
+                    Size = new Size(125, 30),
+                    Text = dead[i + 4] + " шт.",
+                    TextAlign = ContentAlignment.MiddleCenter
                 };
 
                 Controls.Add(nameLabel);
                 Controls.Add(countLabel);
 
-                y += 35;
+                x += 140;
             }
 
             InitializeComponent();
+        }
+
+        private void DeadProducts_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

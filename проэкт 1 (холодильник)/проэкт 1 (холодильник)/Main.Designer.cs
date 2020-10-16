@@ -98,6 +98,7 @@
             // 
             // fridgeButton
             // 
+            //this.fridgeButton.BackgroundImage = global::Fridgerator.Properties.Resources.yctungsypcnnkkqoy8gn_800x;
             this.fridgeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.fridgeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.fridgeButton.ForeColor = System.Drawing.SystemColors.ActiveCaption;
@@ -126,9 +127,7 @@
             this.MinimumSize = new System.Drawing.Size(572, 364);
             this.Name = "Main";
             this.Text = "Панель управления";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Main_FormClosed);
             this.ResumeLayout(false);
-
         }
 
         #endregion

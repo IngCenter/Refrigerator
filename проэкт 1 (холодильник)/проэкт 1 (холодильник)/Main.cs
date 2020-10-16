@@ -17,19 +17,9 @@ namespace Fridgerator
     {
         public static List<Product> ProductList = new List<Product>();
 
-        public static MySqlConnection Connection;
-
         public Main()
-        {
-            string connString = "Server=VH287.spaceweb.ru;" +
-                ";Database= beavisabra_holod" +
-                ";port=3306;User Id=beavisabra_holod;password=Beavis1989";
-
-            Connection = new MySqlConnection(connString);
-
-            Connection.Open();
-
-            List<string> products = Select("SELECT * FROM Products");
+        {            
+            List<string> products = Program.Select("SELECT * FROM Products");
 
             for (int i = 0; i < products.Count; i += 5)
                 ProductList.Add(new Product(products[i], DateTime.Parse(products[i + 1]), int.Parse(products[i + 2]), products[i + 3], int.Parse(products[i + 4])));
@@ -82,30 +72,7 @@ namespace Fridgerator
         {
             CookingRecipes f = new CookingRecipes();
             f.ShowDialog();
-        }
-
-        public static List<string> Select(string Text)
-        {
-            //Результат
-            List<string> results = new List<string>();
-            //Создать команду
-            MySqlCommand command = new MySqlCommand(Text, Connection);
-            //Выполнить команду
-            DbDataReader reader = command.ExecuteReader();
-
-            while (reader.Read())
-                for (int i = 0; i < reader.FieldCount; i++)
-                    results.Add(reader.GetValue(i).ToString());
-
-            reader.Close();
-
-            return results;
-        }
-
-        private void Main_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            Connection.Close();
-        }
+        }        
     }
 
     public struct Product

@@ -18,53 +18,13 @@ namespace Fridgerator
         public static List<Product> ProductList = new List<Product>();
 
         public Main()
-        {
+        {            
+            List<string> products = Program.Select("SELECT * FROM Products");
+
+            for (int i = 0; i < products.Count; i += 5)
+                ProductList.Add(new Product(products[i], DateTime.Parse(products[i + 1]), int.Parse(products[i + 2]), products[i + 3], int.Parse(products[i + 4])));
+
             InitializeComponent();
-
-            // Connection String.
-            string connString = "Server=VH287.spaceweb.ru;" +
-                ";Database= beavisabra_holod" +
-                ";port=3306;User Id=beavisabra_holod;password=Beavis1989";
-
-            MySqlConnection conn = new MySqlConnection(connString);
-
-            conn.Open();
-
-            MySqlCommand command = new MySqlCommand("SELECT * FROM Product", conn);
-
-            DbDataReader reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                ProductList.Add(new Product(reader.GetString(0), reader.GetString(1), reader.GetInt32(3), reader.GetDateTime(2)));
-            }
-
-            conn.Close();
-        }
-
-        private void Главная_Load(object sender, EventArgs e)
-        {
-            //LoadSave();
-        }
-        
-        private void LoadSave()
-        {
-            string[] lines = File.ReadAllLines("Save.txt");
-
-            foreach(string line in lines)
-            {
-                string[] product = line.Split(new string[1] { ", " }, StringSplitOptions.None);
-                ProductList.Add(new Product(product[0], product[1], int.Parse(product[2]), DateTime.Parse(product[3])));
-            }
-        }
-
-        private void SaveSave()
-        {
-            List<string> lines = new List<string>();
-
-            foreach (Product product in ProductList)
-                lines.Add(product.Name + ", " + product.Category + ", " + product.Count + ", " + product.DateBegin.ToString("d"));
-
-            File.WriteAllLines("Save.txt", lines);
         }
 
         private void CountButton_Click(object sender, EventArgs e)
@@ -77,13 +37,13 @@ namespace Fridgerator
             MessageBox.Show("Количество: " + count, "Количество продуктов");
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void DeadProducts_Click(object sender, EventArgs e)
         {
-            Просрочка f = new Просрочка();
+            DeadProducts f = new DeadProducts();
             f.ShowDialog();
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Contents_Click(object sender, EventArgs e)
         {
             if (ProductList.Count == 0)
             {
@@ -92,13 +52,13 @@ namespace Fridgerator
                 return;
             }
 
-            Содержимое f = new Содержимое();
+            Contents f = new Contents();
             f.ShowDialog();
         }
 
         private void Fridge_Click(object sender, EventArgs e)
         {
-            Техсост f = new Техсост();
+            Condition f = new Condition();
             f.ShowDialog();
         }
 
@@ -112,34 +72,24 @@ namespace Fridgerator
         {
             CookingRecipes f = new CookingRecipes();
             f.ShowDialog();
-        }
-
-        private void Main_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            //SaveSave();
-        }
+        }        
     }
 
     public struct Product
     {
         public string Name;
-        public string Category;
-        public int Count;
         public DateTime DateBegin;
-        public DateTime DateEnd;
+        public int LifeTime;
+        public string Unit;
+        public int Count;
 
-        public Product(string name, string category, int count, DateTime dateBegin)
+        public Product(string name, DateTime dateBegin, int lifeTime, string unit, int count)
         {
             Name = name;
-            Category = category;
-            Count = count;
             DateBegin = dateBegin;
-            DateEnd = DateBegin.AddDays(2);
-        }
-
-        public DateTime TimeToDie()
-        {
-            return DateTime.FromBinary(DateEnd.ToBinary() - DateBegin.ToBinary());
+            LifeTime = lifeTime;
+            Unit = unit;
+            Count = count;
         }
     }
 }

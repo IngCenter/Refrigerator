@@ -49,11 +49,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Сервисы.cs">
+    <Compile Include="Services.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Сервисы.Designer.cs">
-      <DependentUpon>Сервисы.cs</DependentUpon>
+    <Compile Include="Services.Designer.cs">
+      <DependentUpon>Services.cs</DependentUpon>
     </Compile>
     <Compile Include="AddProducts.cs">
       <SubType>Form</SubType>
@@ -61,11 +61,11 @@
     <Compile Include="AddProducts.Designer.cs">
       <DependentUpon>AddProducts.cs</DependentUpon>
     </Compile>
-    <Compile Include="Техсост.cs">
+    <Compile Include="Condition.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Техсост.Designer.cs">
-      <DependentUpon>Техсост.cs</DependentUpon>
+    <Compile Include="Condition.Designer.cs">
+      <DependentUpon>Condition.cs</DependentUpon>
     </Compile>
     <Compile Include="Содержимое.cs">
       <SubType>Form</SubType>
@@ -73,11 +73,11 @@
     <Compile Include="Содержимое.Designer.cs">
       <DependentUpon>Содержимое.cs</DependentUpon>
     </Compile>
-    <Compile Include="Просрочка.cs">
+    <Compile Include="DeadProducts.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Просрочка.Designer.cs">
-      <DependentUpon>Просрочка.cs</DependentUpon>
+    <Compile Include="DeadProducts.Designer.cs">
+      <DependentUpon>DeadProducts.cs</DependentUpon>
     </Compile>
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
@@ -93,8 +93,8 @@
     <Compile Include="CookingRecipes.Designer.cs">
       <DependentUpon>CookingRecipes.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Сервисы.resx">
-      <DependentUpon>Сервисы.cs</DependentUpon>
+    <EmbeddedResource Include="Services.resx">
+      <DependentUpon>Services.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddProducts.resx">
       <DependentUpon>AddProducts.cs</DependentUpon>
@@ -112,14 +112,14 @@
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Просрочка.resx">
-      <DependentUpon>Просрочка.cs</DependentUpon>
+    <EmbeddedResource Include="DeadProducts.resx">
+      <DependentUpon>DeadProducts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Содержимое.resx">
       <DependentUpon>Содержимое.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Техсост.resx">
-      <DependentUpon>Техсост.cs</DependentUpon>
+    <EmbeddedResource Include="Condition.resx">
+      <DependentUpon>Condition.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CookingRecipes.resx">
       <DependentUpon>CookingRecipes.cs</DependentUpon>

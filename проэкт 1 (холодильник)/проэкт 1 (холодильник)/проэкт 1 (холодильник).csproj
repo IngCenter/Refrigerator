@@ -67,11 +67,11 @@
     <Compile Include="Condition.Designer.cs">
       <DependentUpon>Condition.cs</DependentUpon>
     </Compile>
-    <Compile Include="Содержимое.cs">
+    <Compile Include="Contents.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Содержимое.Designer.cs">
-      <DependentUpon>Содержимое.cs</DependentUpon>
+    <Compile Include="Contents.Designer.cs">
+      <DependentUpon>Contents.cs</DependentUpon>
     </Compile>
     <Compile Include="DeadProducts.cs">
       <SubType>Form</SubType>
@@ -115,8 +115,8 @@
     <EmbeddedResource Include="DeadProducts.resx">
       <DependentUpon>DeadProducts.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Содержимое.resx">
-      <DependentUpon>Содержимое.cs</DependentUpon>
+    <EmbeddedResource Include="Contents.resx">
+      <DependentUpon>Contents.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Condition.resx">
       <DependentUpon>Condition.cs</DependentUpon>

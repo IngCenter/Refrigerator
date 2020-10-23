@@ -28,76 +28,106 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
+            this.addTextBox = new System.Windows.Forms.TextBox();
+            this.countNum = new System.Windows.Forms.NumericUpDown();
+            this.addAll = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.units = new System.Windows.Forms.ComboBox();
+            this.mainPanel = new System.Windows.Forms.Panel();
+            ((System.ComponentModel.ISupportInitialize)(this.countNum)).BeginInit();
+            this.mainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // addTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(119, 79);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(248, 22);
-            this.textBox1.TabIndex = 0;
+            this.addTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addTextBox.Location = new System.Drawing.Point(0, 0);
+            this.addTextBox.Margin = new System.Windows.Forms.Padding(4);
+            this.addTextBox.Name = "addTextBox";
+            this.addTextBox.Size = new System.Drawing.Size(428, 38);
+            this.addTextBox.TabIndex = 0;
             // 
-            // numericUpDown1
+            // countNum
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(376, 79);
-            this.numericUpDown1.Margin = new System.Windows.Forms.Padding(4);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(52, 22);
-            this.numericUpDown1.TabIndex = 12;
+            this.countNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.countNum.Location = new System.Drawing.Point(436, 0);
+            this.countNum.Margin = new System.Windows.Forms.Padding(4);
+            this.countNum.Name = "countNum";
+            this.countNum.Size = new System.Drawing.Size(97, 38);
+            this.countNum.TabIndex = 12;
             // 
-            // button1
+            // addAll
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(660, 190);
-            this.button1.Margin = new System.Windows.Forms.Padding(4);
-            this.button1.Name = "AddProducts";
-            this.button1.Size = new System.Drawing.Size(248, 122);
-            this.button1.TabIndex = 24;
-            this.button1.Text = "Добавить всё";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.addAll.Location = new System.Drawing.Point(702, 127);
+            this.addAll.Margin = new System.Windows.Forms.Padding(4);
+            this.addAll.Name = "addAll";
+            this.addAll.Size = new System.Drawing.Size(198, 114);
+            this.addAll.TabIndex = 24;
+            this.addAll.Text = "Добавить всё";
+            this.addAll.UseVisualStyleBackColor = true;
+            this.addAll.Click += new System.EventHandler(this.AddAll_Click);
             // 
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(660, 79);
+            this.button2.Location = new System.Drawing.Point(702, 13);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "AddLine";
-            this.button2.Size = new System.Drawing.Size(248, 57);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(198, 106);
             this.button2.TabIndex = 25;
             this.button2.Text = "Добавить новую строку";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.AddLine_Click);
             // 
+            // units
+            // 
+            this.units.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.units.FormattingEnabled = true;
+            this.units.Location = new System.Drawing.Point(540, 0);
+            this.units.Name = "units";
+            this.units.Size = new System.Drawing.Size(98, 39);
+            this.units.TabIndex = 26;
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.AutoScroll = true;
+            this.mainPanel.Controls.Add(this.units);
+            this.mainPanel.Controls.Add(this.countNum);
+            this.mainPanel.Controls.Add(this.addTextBox);
+            this.mainPanel.Location = new System.Drawing.Point(12, 12);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(683, 229);
+            this.mainPanel.TabIndex = 27;
+            // 
             // AddProducts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(917, 321);
+            this.ClientSize = new System.Drawing.Size(913, 253);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.numericUpDown1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.addAll);
+            this.Controls.Add(this.mainPanel);
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(931, 300);
+            this.MinimumSize = new System.Drawing.Size(931, 300);
             this.Name = "AddProducts";
             this.Text = "Что я купил";
             this.Load += new System.EventHandler(this.Form1_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.countNum)).EndInit();
+            this.mainPanel.ResumeLayout(false);
+            this.mainPanel.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox addTextBox;
+        private System.Windows.Forms.NumericUpDown countNum;
+        private System.Windows.Forms.Button addAll;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ComboBox units;
+        private System.Windows.Forms.Panel mainPanel;
     }
 }

@@ -49,5 +49,14 @@ namespace Fridgerator
 
             return results;
         }
+
+        public static void Insert(string Text)
+        {
+            //Создать команду
+            MySqlCommand command = new MySqlCommand(Text, Connection);
+
+            //Выполнить команду
+            command.ExecuteNonQuery();
+        }
     }
 }

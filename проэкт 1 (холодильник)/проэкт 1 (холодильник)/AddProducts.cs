@@ -22,35 +22,48 @@ namespace Fridgerator
 
         }
 
-        private int y = 60;
+        private int y = 0;
 
         private void AddLine_Click(object sender, EventArgs e)
         {
-            y += 35;
+            y += 45;
 
-          /*
-           * Button btn = new Button();
-            btn.Location = new Point(353, y);
-            btn.Size = new Size(93, 20);
-            btn.Text = "Добавить";
-            btn.Click += new System.EventHandler(button2_Click);
+            ComboBox comboBox = new ComboBox
+            {
+                Location = new Point(units.Location.X, y),
+                Size = units.Size,
+                Font = units.Font
+            };
 
-            Controls.Add(btn);
-          */
+            NumericUpDown num = new NumericUpDown
+            {
+                Location = new Point(countNum.Location.X, y),
+                Size = countNum.Size,
+                Font = countNum.Font
+            };
 
+            TextBox tb = new TextBox
+            {
+                Location = new Point(addTextBox.Location.X, y),
+                Size = addTextBox.Size,
+                Font = addTextBox.Font
+            };
 
-            NumericUpDown num = new NumericUpDown();
-            num.Location = new Point(282, y);
-            num.Size = new Size(52, 20);
+            mainPanel.Controls.AddRange(new Control[3] { comboBox, num, tb });
+        }
 
-            Controls.Add(num);
+        private void AddAll_Click(object sender, EventArgs e)
+        {
+            /*List<string> mass = new List<string>();
 
+            foreach (Control control in mainPanel.Controls)
+            {
+                if (control is TextBox)
+                    mass.Add(control.Text);
+            }
 
-            TextBox tb = new TextBox();
-            tb.Location = new Point(89, y);
-            tb.Size = new Size(187, 20);
-
-            Controls.Add(tb);
+            Program.Insert("INSERT INTO 'Products' ('Name', 'DateBegin', 'LifeTime', 'Unit', 'Count') " +
+                "VALUES (" + );*/
         }
     }
 }

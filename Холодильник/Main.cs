@@ -70,7 +70,7 @@ namespace Fridgerator
 
         private void CookingRecipes_Click(object sender, EventArgs e)
         {
-            CookingRecipes f = new CookingRecipes();
+            Recipe f = new Recipe();
             f.ShowDialog();
         }        
     }

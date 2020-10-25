@@ -10,26 +10,22 @@ using System.Windows.Forms;
 
 namespace Fridgerator
 {
-    public partial class CookingRecipes : Form
+    public partial class AddRecipe : Form
     {
-        public CookingRecipes()
+        public AddRecipe()
         {
             InitializeComponent();
         }
 
-        private void Что_я_приготовил_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox7_TextChanged(object sender, EventArgs e)
+        private void AddRecipe_Load(object sender, EventArgs e)
         {
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            Program.Insert("INSERT INTO `Recipes` (`OutName`) VALUES ('" + textBox1.Text + "')");
+            MessageBox.Show("Сохранено");
         }
     }
 }

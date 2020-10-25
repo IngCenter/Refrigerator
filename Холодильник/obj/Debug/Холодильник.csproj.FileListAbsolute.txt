@@ -4,7 +4,6 @@ C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\bin\Debug\пр�
 C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Холодильник.csprojAssemblyReference.cache
 C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.Services.resources
 C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.AddProducts.resources
-C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\проэкт_1__холодильник_.Properties.Resources.resources
 C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.Main.resources
 C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.DeadProducts.resources
 C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.Contents.resources
@@ -15,3 +14,6 @@ C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Хо�
 C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Холодильник.csproj.CopyComplete
 C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\проэкт 1 (холодильник).exe
 C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\проэкт 1 (холодильник).pdb
+C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.AddRecipe.resources
+C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.Recipe.resources
+C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.Properties.Resources.resources

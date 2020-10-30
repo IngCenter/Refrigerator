@@ -21,8 +21,8 @@ namespace Fridgerator
         {            
             List<string> products = Program.Select("SELECT * FROM Products");
 
-            for (int i = 0; i < products.Count; i += 5)
-                ProductList.Add(new Product(products[i], DateTime.Parse(products[i + 1]), int.Parse(products[i + 2]), products[i + 3], int.Parse(products[i + 4])));
+            for (int i = 0; i < products.Count; i += 6)
+                ProductList.Add(new Product(products[i], DateTime.Parse(products[i + 1]), int.Parse(products[i + 2]), products[i + 3], int.Parse(products[i + 4]), products[i + 5]));
 
             InitializeComponent();
         }
@@ -82,14 +82,16 @@ namespace Fridgerator
         public int LifeTime;
         public string Unit;
         public int Count;
+        public string Type;
 
-        public Product(string name, DateTime dateBegin, int lifeTime, string unit, int count)
+        public Product(string name, DateTime dateBegin, int lifeTime, string unit, int count, string type)
         {
             Name = name;
             DateBegin = dateBegin;
             LifeTime = lifeTime;
             Unit = unit;
             Count = count;
+            Type = type;
         }
     }
 }

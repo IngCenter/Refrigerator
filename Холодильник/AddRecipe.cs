@@ -24,8 +24,13 @@ namespace Fridgerator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Program.Insert("INSERT INTO `Recipes` (`OutName`) VALUES ('" + textBox1.Text + "')");
+            Program.Insert("INSERT INTO `Recipes` (`OutName`,Description,Script) VALUES ('" + textBox1.Text + "','"+ textBox2.Text + "','" + textBox3.Text + "')");
             MessageBox.Show("Сохранено");
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

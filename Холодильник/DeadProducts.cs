@@ -21,7 +21,7 @@ namespace Fridgerator
                 " WHERE DATEDIFF(CURDATE(), DateBegin) > LifeTime");
 
             //Тут 5 столбцов
-            for (int i = 0; i < dead.Count; i += 5)
+            for (int i = 0; i < dead.Count; i += 6)
             {
                 //0-Название, 4 - Количество
                 Label nameLabel = new Label

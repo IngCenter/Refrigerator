@@ -34,9 +34,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.units = new System.Windows.Forms.ComboBox();
             this.mainPanel = new System.Windows.Forms.Panel();
-            this.dateBeginPicker = new System.Windows.Forms.DateTimePicker();
-            this.typeTextBox = new System.Windows.Forms.TextBox();
             this.delete = new System.Windows.Forms.Button();
+            this.typeTextBox = new System.Windows.Forms.TextBox();
+            this.dateBeginPicker = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.countNum)).BeginInit();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +59,7 @@
             this.countNum.Name = "countNum";
             this.countNum.Size = new System.Drawing.Size(97, 38);
             this.countNum.TabIndex = 12;
+            this.countNum.Tag = "count";
             this.countNum.ValueChanged += new System.EventHandler(this.CountNum_ValueChanged);
             // 
             // addAll
@@ -101,6 +102,7 @@
             this.units.Name = "units";
             this.units.Size = new System.Drawing.Size(98, 39);
             this.units.TabIndex = 26;
+            this.units.Tag = "unit";
             this.units.SelectedIndexChanged += new System.EventHandler(this.Units_SelectedIndexChanged);
             // 
             // mainPanel
@@ -117,26 +119,6 @@
             this.mainPanel.Size = new System.Drawing.Size(952, 229);
             this.mainPanel.TabIndex = 27;
             // 
-            // dateBeginPicker
-            // 
-            this.dateBeginPicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateBeginPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dateBeginPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateBeginPicker.Location = new System.Drawing.Point(605, 0);
-            this.dateBeginPicker.Name = "dateBeginPicker";
-            this.dateBeginPicker.Size = new System.Drawing.Size(151, 38);
-            this.dateBeginPicker.TabIndex = 27;
-            // 
-            // typeTextBox
-            // 
-            this.typeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.typeTextBox.Location = new System.Drawing.Point(763, 0);
-            this.typeTextBox.Name = "typeTextBox";
-            this.typeTextBox.Size = new System.Drawing.Size(152, 38);
-            this.typeTextBox.TabIndex = 28;
-            this.typeTextBox.Tag = "Type";
-            this.typeTextBox.Text = "Тип";
-            // 
             // delete
             // 
             this.delete.BackColor = System.Drawing.Color.Maroon;
@@ -149,6 +131,27 @@
             this.delete.TabIndex = 29;
             this.delete.Text = "-";
             this.delete.UseVisualStyleBackColor = false;
+            // 
+            // typeTextBox
+            // 
+            this.typeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.typeTextBox.Location = new System.Drawing.Point(763, 0);
+            this.typeTextBox.Name = "typeTextBox";
+            this.typeTextBox.Size = new System.Drawing.Size(152, 38);
+            this.typeTextBox.TabIndex = 28;
+            this.typeTextBox.Tag = "type";
+            this.typeTextBox.Text = "Тип";
+            // 
+            // dateBeginPicker
+            // 
+            this.dateBeginPicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateBeginPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateBeginPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dateBeginPicker.Location = new System.Drawing.Point(605, 0);
+            this.dateBeginPicker.Name = "dateBeginPicker";
+            this.dateBeginPicker.Size = new System.Drawing.Size(151, 38);
+            this.dateBeginPicker.TabIndex = 27;
+            this.dateBeginPicker.Tag = "dateBegin";
             // 
             // AddProducts
             // 

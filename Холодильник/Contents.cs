@@ -32,7 +32,7 @@ namespace Fridgerator
 
             Controls.AddRange(new Label[4] { nameLabel, dateBeginLabel, lifeTimeLabel, countLabel});
 
-            for (int i = 0; i < products.Count; i += 5)
+            for (int i = 0; i < products.Count; i += 6)
             {
                 y += 30;
                 Color backColor = DateTime.Parse(products[i + 1]).AddDays(int.Parse(products[i + 2])) > DateTime.Today ? Color.FromArgb(192, 128, 128) : Color.Transparent;

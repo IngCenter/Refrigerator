@@ -28,23 +28,11 @@ namespace Fridgerator
         {
             y += 45;
 
-            Button button = new Button
-            {
-                Location = new Point(delete.Location.X, y),
-                Size = delete.Size,
-                Font = delete.Font,
-                Text = delete.Text,
-                ForeColor = delete.ForeColor,
-                BackColor = delete.BackColor,
-                FlatStyle = delete.FlatStyle
-            };
-
             ComboBox comboBox = new ComboBox
             {
                 Location = new Point(units.Location.X, y),
                 Size = units.Size,
-                Font = units.Font,
-                Text = units.Text
+                Font = units.Font
             };
 
             NumericUpDown num = new NumericUpDown
@@ -58,83 +46,24 @@ namespace Fridgerator
             {
                 Location = new Point(addTextBox.Location.X, y),
                 Size = addTextBox.Size,
-                Font = addTextBox.Font,
-                Text = addTextBox.Text
+                Font = addTextBox.Font
             };
 
-            DateTimePicker dtp = new DateTimePicker
-            {
-                Location = new Point(dateBeginPicker.Location.X, y),
-                Size = dateBeginPicker.Size,
-                Font = dateBeginPicker.Font,
-                Value = DateTime.Today,
-                Format = DateTimePickerFormat.Short
-            };
-
-            TextBox typeTb = new TextBox
-            {
-                Location = new Point(typeTextBox.Location.X, y),
-                Size = typeTextBox.Size,
-                Font = typeTextBox.Font,
-                Text = typeTextBox.Text
-            };
-
-            mainPanel.Controls.AddRange(new Control[6] { button, comboBox, num, tb, dtp, typeTb });
+            mainPanel.Controls.AddRange(new Control[3] { comboBox, num, tb });
         }
 
         private void AddAll_Click(object sender, EventArgs e)
         {
-            foreach(Control control0 in mainPanel.Controls)
+            /*List<string> mass = new List<string>();
+
+            foreach (Control control in mainPanel.Controls)
             {
-                if (control0 is TextBox)
-                {
-                    List<string> list = new List<string>();
-
-                    foreach (Control control1 in mainPanel.Controls)
-                    {
-                        if(control1.Location.Y == control0.Location.Y)
-                        {
-                            if (control1 is TextBox)
-                            {
-                                if (control1.Tag.ToString() == "Type")
-                                {
-
-                                }
-
-                                else
-                                {
-
-                                }
-                            }
-
-                            else if (control1 is NumericUpDown)
-                            {
-
-                            }
-
-                            else if (control1 is ComboBox)
-                            {
-
-                            }
-
-                            else if (control1 is DateTimePicker)
-                            {
-
-                            }
-                        }
-                    }
-                }
+                if (control is TextBox)
+                    mass.Add(control.Text);
             }
-        }
 
-        private void CountNum_ValueChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Units_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            Program.Insert("INSERT INTO 'Products' ('Name', 'DateBegin', 'LifeTime', 'Unit', 'Count') " +
+                "VALUES (" + );*/
         }
     }
 }

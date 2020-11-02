@@ -36,7 +36,8 @@ namespace Fridgerator
                 Text = delete.Text,
                 ForeColor = delete.ForeColor,
                 BackColor = delete.BackColor,
-                FlatStyle = delete.FlatStyle
+                FlatStyle = delete.FlatStyle,
+                Margin = delete.Margin
             };
 
             ComboBox comboBox = new ComboBox
@@ -45,7 +46,8 @@ namespace Fridgerator
                 Size = units.Size,
                 Font = units.Font,
                 Text = units.Text,
-                Tag = "units"
+                Tag = "units",
+                Margin = units.Margin
             };
 
             NumericUpDown num = new NumericUpDown
@@ -53,7 +55,8 @@ namespace Fridgerator
                 Location = new Point(countNum.Location.X, y),
                 Size = countNum.Size,
                 Font = countNum.Font,
-                Tag = "conut"
+                Tag = "conut",
+                Margin = countNum.Margin
             };
 
             TextBox tb = new TextBox
@@ -61,7 +64,8 @@ namespace Fridgerator
                 Location = new Point(addTextBox.Location.X, y),
                 Size = addTextBox.Size,
                 Font = addTextBox.Font,
-                Text = addTextBox.Text
+                Text = addTextBox.Text,
+                Margin = addTextBox.Margin
             };
 
             DateTimePicker dtp = new DateTimePicker
@@ -71,7 +75,8 @@ namespace Fridgerator
                 Font = dateBeginPicker.Font,
                 Value = DateTime.Today,
                 Format = DateTimePickerFormat.Short,
-                Tag = "dateBegin"
+                Tag = "dateBegin",
+                Margin = dateBeginPicker.Margin
             };
 
             TextBox typeTb = new TextBox
@@ -80,10 +85,11 @@ namespace Fridgerator
                 Size = typeTextBox.Size,
                 Font = typeTextBox.Font,
                 Text = typeTextBox.Text,
-                Tag = "type"
+                Tag = "type",
+                Margin = typeTextBox.Margin
             };
 
-            mainPanel.Controls.AddRange(new Control[6] { button, comboBox, num, tb, dtp, typeTb });
+            mainPanel.Controls.AddRange(new Control[6] { button, tb, num, comboBox, dtp, typeTb });
         }
 
         private void AddAll_Click(object sender, EventArgs e)

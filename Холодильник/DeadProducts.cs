@@ -55,7 +55,7 @@ namespace Fridgerator
 
         private void DeadProducts_Load(object sender, EventArgs e)
         {
-
+             
         }
     }
 }

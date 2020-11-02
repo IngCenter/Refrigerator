@@ -36,3 +36,4 @@ C:\Users\Даниел\source\repos\Refrigerator\Холодильник\obj\Debug
 C:\Users\Даниел\source\repos\Refrigerator\Холодильник\obj\Debug\Холодильник.csproj.CopyComplete
 C:\Users\Даниел\source\repos\Refrigerator\Холодильник\obj\Debug\проэкт 1 (холодильник).exe
 C:\Users\Даниел\source\repos\Refrigerator\Холодильник\obj\Debug\проэкт 1 (холодильник).pdb
+C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.Coments.resources

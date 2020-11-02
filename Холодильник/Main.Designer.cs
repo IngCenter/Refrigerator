@@ -34,6 +34,7 @@
             this.addProductsButton = new System.Windows.Forms.Button();
             this.cookButton = new System.Windows.Forms.Button();
             this.fridgeButton = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // deadProducts
@@ -98,24 +99,37 @@
             // 
             // fridgeButton
             // 
-            //this.fridgeButton.BackgroundImage = global::Fridgerator.Properties.Resources.yctungsypcnnkkqoy8gn_800x;
             this.fridgeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.fridgeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.fridgeButton.ForeColor = System.Drawing.SystemColors.ActiveCaption;
             this.fridgeButton.Location = new System.Drawing.Point(196, 13);
             this.fridgeButton.Margin = new System.Windows.Forms.Padding(4);
             this.fridgeButton.Name = "fridgeButton";
-            this.fridgeButton.Size = new System.Drawing.Size(148, 289);
+            this.fridgeButton.Size = new System.Drawing.Size(148, 221);
             this.fridgeButton.TabIndex = 3;
             this.fridgeButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.fridgeButton.UseVisualStyleBackColor = true;
             this.fridgeButton.Click += new System.EventHandler(this.Fridge_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(196, 242);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(148, 60);
+            this.button1.TabIndex = 7;
+            this.button1.TabStop = false;
+            this.button1.Text = "Коментарии";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 317);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.cookButton);
             this.Controls.Add(this.addProductsButton);
             this.Controls.Add(this.fridgeButton);
@@ -128,6 +142,7 @@
             this.Name = "Main";
             this.Text = "Панель управления";
             this.ResumeLayout(false);
+
         }
 
         #endregion
@@ -138,6 +153,7 @@
         private System.Windows.Forms.Button fridgeButton;
         private System.Windows.Forms.Button addProductsButton;
         private System.Windows.Forms.Button cookButton;
+        private System.Windows.Forms.Button button1;
     }
 }
 

@@ -44,14 +44,16 @@ namespace Fridgerator
                 Location = new Point(units.Location.X, y),
                 Size = units.Size,
                 Font = units.Font,
-                Text = units.Text
+                Text = units.Text,
+                Tag = "units"
             };
 
             NumericUpDown num = new NumericUpDown
             {
                 Location = new Point(countNum.Location.X, y),
                 Size = countNum.Size,
-                Font = countNum.Font
+                Font = countNum.Font,
+                Tag = "conut"
             };
 
             TextBox tb = new TextBox
@@ -68,7 +70,8 @@ namespace Fridgerator
                 Size = dateBeginPicker.Size,
                 Font = dateBeginPicker.Font,
                 Value = DateTime.Today,
-                Format = DateTimePickerFormat.Short
+                Format = DateTimePickerFormat.Short,
+                Tag = "dateBegin"
             };
 
             TextBox typeTb = new TextBox
@@ -76,7 +79,8 @@ namespace Fridgerator
                 Location = new Point(typeTextBox.Location.X, y),
                 Size = typeTextBox.Size,
                 Font = typeTextBox.Font,
-                Text = typeTextBox.Text
+                Text = typeTextBox.Text,
+                Tag = "type"
             };
 
             mainPanel.Controls.AddRange(new Control[6] { button, comboBox, num, tb, dtp, typeTb });
@@ -86,43 +90,43 @@ namespace Fridgerator
         {
             foreach(Control control0 in mainPanel.Controls)
             {
-                if (control0 is TextBox)
+                if (control0 is TextBox && control0.Location.X == addTextBox.Location.X)
                 {
-                    List<string> list = new List<string>();
+                    if (control0.Text == "Название")
+                        continue;
+
+                    string name = control0.Text, count = "", unit = "", type = "";
+                    DateTime dateBegin = DateTime.Today;
 
                     foreach (Control control1 in mainPanel.Controls)
                     {
-                        if(control1.Location.Y == control0.Location.Y)
+                        if(control1.Location.Y == control0.Location.Y && control1.Tag != null)
                         {
-                            if (control1 is TextBox)
+                            switch(control1.Tag.ToString())
                             {
-                                if (control1.Tag.ToString() == "Type")
-                                {
+                                case "count":
+                                    count = ((NumericUpDown)control1).Value.ToString();
+                                    break;
 
-                                }
+                                case "unit":
+                                    unit = control1.Text;
+                                    break;
 
-                                else
-                                {
+                                case "dateBegin":
+                                    dateBegin = ((DateTimePicker)control1).Value;
+                                    break;
 
-                                }
-                            }
-
-                            else if (control1 is NumericUpDown)
-                            {
-
-                            }
-
-                            else if (control1 is ComboBox)
-                            {
-
-                            }
-
-                            else if (control1 is DateTimePicker)
-                            {
-
+                                case "type":
+                                    type = control1.Text;
+                                    break;
                             }
                         }
                     }
+
+                    Program.Insert("INSERT INTO Products (Name, Count, Unit, DateBegin, Type) " +
+                                   "VALUES (" + name + ", " + count + ", " + unit + ", " +
+                                   "STR_TO_DATE('" + dateBegin.ToShortDateString() + "', '%d.%m.%y'))" + ", " + 
+                                   type + ")");
                 }
             }
         }

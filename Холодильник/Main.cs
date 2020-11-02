@@ -72,7 +72,13 @@ namespace Fridgerator
         {
             Recipe f = new Recipe();
             f.ShowDialog();
-        }        
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Coments coments = new Coments();
+            coments.ShowDialog();
+        }
     }
 
     public struct Product

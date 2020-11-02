@@ -124,11 +124,13 @@ namespace Fridgerator
                     }
 
                     Program.Insert("INSERT INTO Products (Name, Count, Unit, DateBegin, Type) " +
-                                   "VALUES (" + name + ", " + count + ", " + unit + ", " +
-                                   "STR_TO_DATE('" + dateBegin.ToShortDateString() + "', '%d.%m.%y'))" + ", " + 
-                                   type + ")");
+                                   "VALUES ('" + name + "', " + count + ", '" + unit + "', " +
+                                   "STR_TO_DATE('" + dateBegin.ToShortDateString() + "', '%d.%m.%y')" + ", '" + 
+                                   type + "')");
                 }
             }
+
+            MessageBox.Show("Добавлено");
         }
 
         private void CountNum_ValueChanged(object sender, EventArgs e)

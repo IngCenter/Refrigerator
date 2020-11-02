@@ -55,6 +55,12 @@
     <Compile Include="AddRecipe.Designer.cs">
       <DependentUpon>AddRecipe.cs</DependentUpon>
     </Compile>
+    <Compile Include="Coments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coments.Designer.cs">
+      <DependentUpon>Coments.cs</DependentUpon>
+    </Compile>
     <Compile Include="Recipe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </Compile>
     <EmbeddedResource Include="AddRecipe.resx">
       <DependentUpon>AddRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coments.resx">
+      <DependentUpon>Coments.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Recipe.resx">
       <DependentUpon>Recipe.cs</DependentUpon>

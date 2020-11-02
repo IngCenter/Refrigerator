@@ -10,27 +10,23 @@ using System.Windows.Forms;
 
 namespace Fridgerator
 {
-    public partial class AddRecipe : Form
+    public partial class Coments : Form
     {
-        public AddRecipe()
+        public Coments()
         {
             InitializeComponent();
         }
 
-        private void AddRecipe_Load(object sender, EventArgs e)
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Program.Insert("INSERT INTO `Recipes` (`OutName`,Description,Script) VALUES ('" + textBox1.Text + "','"+ textBox2.Text + "','" + textBox3.Text + "')");
+            Program.Insert("INSERT INTO `Comments` (`Product`,CommentText,Raiting,Time) VALUES ('" + textBox1.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox2.Text + "')");
             MessageBox.Show("Сохранено");
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

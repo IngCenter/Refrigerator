@@ -111,6 +111,12 @@
     <Compile Include="CookingRecipes.Designer.cs">
       <DependentUpon>CookingRecipes.cs</DependentUpon>
     </Compile>
+    <Compile Include="VisualComents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualComents.Designer.cs">
+      <DependentUpon>VisualComents.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddRecipe.resx">
       <DependentUpon>AddRecipe.cs</DependentUpon>
     </EmbeddedResource>
@@ -150,6 +156,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CookingRecipes.resx">
       <DependentUpon>CookingRecipes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualComents.resx">
+      <DependentUpon>VisualComents.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

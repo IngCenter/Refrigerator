@@ -40,6 +40,8 @@ namespace Fridgerator
                 Margin = delete.Margin
             };
 
+            button.Click += Delete_Click;
+
             ComboBox comboBox = new ComboBox
             {
                 Location = new Point(units.Location.X, y),
@@ -94,7 +96,7 @@ namespace Fridgerator
 
         private void AddAll_Click(object sender, EventArgs e)
         {
-            foreach(Control control0 in mainPanel.Controls)
+            foreach (Control control0 in mainPanel.Controls)
             {
                 if (control0 is TextBox && control0.Location.X == addTextBox.Location.X)
                 {
@@ -106,9 +108,9 @@ namespace Fridgerator
 
                     foreach (Control control1 in mainPanel.Controls)
                     {
-                        if(control1.Location.Y == control0.Location.Y && control1.Tag != null)
+                        if (control1.Location.Y == control0.Location.Y && control1.Tag != null)
                         {
-                            switch(control1.Tag.ToString())
+                            switch (control1.Tag.ToString())
                             {
                                 case "count":
                                     count = ((NumericUpDown)control1).Value.ToString();
@@ -131,7 +133,7 @@ namespace Fridgerator
 
                     Program.Insert("INSERT INTO Products (Name, Count, Unit, DateBegin, Type) " +
                                    "VALUES ('" + name + "', " + count + ", '" + unit + "', " +
-                                   "STR_TO_DATE('" + dateBegin.ToShortDateString() + "', '%d.%m.%y')" + ", '" + 
+                                   "STR_TO_DATE('" + dateBegin.ToShortDateString() + "', '%d.%m.%y')" + ", '" +
                                    type + "')");
                 }
             }
@@ -147,6 +149,25 @@ namespace Fridgerator
         private void Units_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            Control deleteButton = sender as Control;
+
+            List<Control> controlsToDelete = new List<Control>();
+            controlsToDelete.Add(deleteButton);
+
+            foreach (Control control1 in mainPanel.Controls)
+            {
+                if (control1 != deleteButton && control1.Location.Y == deleteButton.Location.Y)
+                {
+                    controlsToDelete.Add(control1);
+                }
+            }
+
+            foreach (var delete in controlsToDelete)
+                mainPanel.Controls.Remove(delete);
         }
     }
 }

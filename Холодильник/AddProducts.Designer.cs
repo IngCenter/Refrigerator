@@ -44,7 +44,7 @@
             // addTextBox
             // 
             this.addTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addTextBox.Location = new System.Drawing.Point(48, 4);
+            this.addTextBox.Location = new System.Drawing.Point(50, 4);
             this.addTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.addTextBox.Name = "addTextBox";
             this.addTextBox.Size = new System.Drawing.Size(343, 38);
@@ -54,8 +54,8 @@
             // countNum
             // 
             this.countNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.countNum.Location = new System.Drawing.Point(399, 4);
-            this.countNum.Margin = new System.Windows.Forms.Padding(4);
+            this.countNum.Location = new System.Drawing.Point(401, 4);
+            this.countNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 5);
             this.countNum.Name = "countNum";
             this.countNum.Size = new System.Drawing.Size(97, 38);
             this.countNum.TabIndex = 12;
@@ -98,7 +98,8 @@
             "г",
             "л",
             "мл"});
-            this.units.Location = new System.Drawing.Point(503, 3);
+            this.units.Location = new System.Drawing.Point(506, 4);
+            this.units.Margin = new System.Windows.Forms.Padding(4);
             this.units.Name = "units";
             this.units.Size = new System.Drawing.Size(98, 39);
             this.units.TabIndex = 26;
@@ -111,17 +112,20 @@
             this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.delete.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.delete.ForeColor = System.Drawing.Color.White;
-            this.delete.Location = new System.Drawing.Point(3, 3);
+            this.delete.Location = new System.Drawing.Point(4, 4);
+            this.delete.Margin = new System.Windows.Forms.Padding(4);
             this.delete.Name = "delete";
             this.delete.Size = new System.Drawing.Size(38, 38);
             this.delete.TabIndex = 29;
             this.delete.Text = "-";
             this.delete.UseVisualStyleBackColor = false;
+            this.delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // typeTextBox
             // 
             this.typeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.typeTextBox.Location = new System.Drawing.Point(764, 3);
+            this.typeTextBox.Location = new System.Drawing.Point(771, 4);
+            this.typeTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.typeTextBox.Name = "typeTextBox";
             this.typeTextBox.Size = new System.Drawing.Size(152, 38);
             this.typeTextBox.TabIndex = 28;
@@ -133,7 +137,8 @@
             this.dateBeginPicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dateBeginPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dateBeginPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateBeginPicker.Location = new System.Drawing.Point(607, 3);
+            this.dateBeginPicker.Location = new System.Drawing.Point(612, 4);
+            this.dateBeginPicker.Margin = new System.Windows.Forms.Padding(4);
             this.dateBeginPicker.Name = "dateBeginPicker";
             this.dateBeginPicker.Size = new System.Drawing.Size(151, 38);
             this.dateBeginPicker.TabIndex = 27;
@@ -155,8 +160,7 @@
             // 
             // AddProducts
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1182, 253);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.button2);

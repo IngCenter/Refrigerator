@@ -38,3 +38,5 @@ C:\Users\Даниел\source\repos\Refrigerator\Холодильник\obj\Debug
 C:\Users\Даниел\source\repos\Refrigerator\Холодильник\obj\Debug\проэкт 1 (холодильник).pdb
 C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.Coments.resources
 C:\Users\Даниел\source\repos\Refrigerator\Холодильник\obj\Debug\Fridgerator.Coments.resources
+C:\Users\Даниел\source\repos\Refrigerator\Холодильник\obj\Debug\Fridgerator.Admin.resources
+C:\Users\Даниел\source\repos\Refrigerator\Холодильник\obj\Debug\Fridgerator.AdminServices.resources

@@ -35,6 +35,7 @@
             this.cookButton = new System.Windows.Forms.Button();
             this.fridgeButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.adminButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // deadProducts
@@ -102,10 +103,10 @@
             this.fridgeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.fridgeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.fridgeButton.ForeColor = System.Drawing.SystemColors.ActiveCaption;
-            this.fridgeButton.Location = new System.Drawing.Point(196, 13);
+            this.fridgeButton.Location = new System.Drawing.Point(196, 67);
             this.fridgeButton.Margin = new System.Windows.Forms.Padding(4);
             this.fridgeButton.Name = "fridgeButton";
-            this.fridgeButton.Size = new System.Drawing.Size(148, 221);
+            this.fridgeButton.Size = new System.Drawing.Size(148, 167);
             this.fridgeButton.TabIndex = 3;
             this.fridgeButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.fridgeButton.UseVisualStyleBackColor = true;
@@ -124,11 +125,23 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // adminButton
+            // 
+            this.adminButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
+            this.adminButton.Location = new System.Drawing.Point(196, 13);
+            this.adminButton.Name = "adminButton";
+            this.adminButton.Size = new System.Drawing.Size(148, 47);
+            this.adminButton.TabIndex = 8;
+            this.adminButton.Text = "AdMiN";
+            this.adminButton.UseVisualStyleBackColor = true;
+            this.adminButton.Click += new System.EventHandler(this.AdminButton_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(554, 317);
+            this.Controls.Add(this.adminButton);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cookButton);
             this.Controls.Add(this.addProductsButton);
@@ -154,6 +167,7 @@
         private System.Windows.Forms.Button addProductsButton;
         private System.Windows.Forms.Button cookButton;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button adminButton;
     }
 }
 

@@ -36,8 +36,11 @@ namespace Fridgerator
                 Text = delete.Text,
                 ForeColor = delete.ForeColor,
                 BackColor = delete.BackColor,
-                FlatStyle = delete.FlatStyle
+                FlatStyle = delete.FlatStyle,
+                Margin = delete.Margin
             };
+
+            button.Click += Delete_Click;
 
             ComboBox comboBox = new ComboBox
             {
@@ -45,7 +48,8 @@ namespace Fridgerator
                 Size = units.Size,
                 Font = units.Font,
                 Text = units.Text,
-                Tag = "units"
+                Tag = "units",
+                Margin = units.Margin
             };
 
             NumericUpDown num = new NumericUpDown
@@ -53,7 +57,8 @@ namespace Fridgerator
                 Location = new Point(countNum.Location.X, y),
                 Size = countNum.Size,
                 Font = countNum.Font,
-                Tag = "conut"
+                Tag = "conut",
+                Margin = countNum.Margin
             };
 
             TextBox tb = new TextBox
@@ -61,7 +66,8 @@ namespace Fridgerator
                 Location = new Point(addTextBox.Location.X, y),
                 Size = addTextBox.Size,
                 Font = addTextBox.Font,
-                Text = addTextBox.Text
+                Text = addTextBox.Text,
+                Margin = addTextBox.Margin
             };
 
             DateTimePicker dtp = new DateTimePicker
@@ -71,7 +77,8 @@ namespace Fridgerator
                 Font = dateBeginPicker.Font,
                 Value = DateTime.Today,
                 Format = DateTimePickerFormat.Short,
-                Tag = "dateBegin"
+                Tag = "dateBegin",
+                Margin = dateBeginPicker.Margin
             };
 
             TextBox typeTb = new TextBox
@@ -80,15 +87,16 @@ namespace Fridgerator
                 Size = typeTextBox.Size,
                 Font = typeTextBox.Font,
                 Text = typeTextBox.Text,
-                Tag = "type"
+                Tag = "type",
+                Margin = typeTextBox.Margin
             };
 
-            mainPanel.Controls.AddRange(new Control[6] { button, comboBox, num, tb, dtp, typeTb });
+            mainPanel.Controls.AddRange(new Control[6] { button, tb, num, comboBox, dtp, typeTb });
         }
 
         private void AddAll_Click(object sender, EventArgs e)
         {
-            foreach(Control control0 in mainPanel.Controls)
+            foreach (Control control0 in mainPanel.Controls)
             {
                 if (control0 is TextBox && control0.Location.X == addTextBox.Location.X)
                 {
@@ -100,9 +108,9 @@ namespace Fridgerator
 
                     foreach (Control control1 in mainPanel.Controls)
                     {
-                        if(control1.Location.Y == control0.Location.Y && control1.Tag != null)
+                        if (control1.Location.Y == control0.Location.Y && control1.Tag != null)
                         {
-                            switch(control1.Tag.ToString())
+                            switch (control1.Tag.ToString())
                             {
                                 case "count":
                                     count = ((NumericUpDown)control1).Value.ToString();
@@ -125,7 +133,7 @@ namespace Fridgerator
 
                     Program.Insert("INSERT INTO Products (Name, Count, Unit, DateBegin, Type) " +
                                    "VALUES ('" + name + "', " + count + ", '" + unit + "', " +
-                                   "STR_TO_DATE('" + dateBegin.ToShortDateString() + "', '%d.%m.%y')" + ", '" + 
+                                   "STR_TO_DATE('" + dateBegin.ToShortDateString() + "', '%d.%m.%y')" + ", '" +
                                    type + "')");
                 }
             }
@@ -141,6 +149,25 @@ namespace Fridgerator
         private void Units_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            Control deleteButton = sender as Control;
+
+            List<Control> controlsToDelete = new List<Control>();
+            controlsToDelete.Add(deleteButton);
+
+            foreach (Control control1 in mainPanel.Controls)
+            {
+                if (control1 != deleteButton && control1.Location.Y == deleteButton.Location.Y)
+                {
+                    controlsToDelete.Add(control1);
+                }
+            }
+
+            foreach (var delete in controlsToDelete)
+                mainPanel.Controls.Remove(delete);
         }
     }
 }

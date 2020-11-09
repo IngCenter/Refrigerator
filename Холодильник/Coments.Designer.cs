@@ -41,6 +41,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -164,11 +165,23 @@
             this.label8.TabIndex = 18;
             this.label8.Text = "2020-12-31 23:59:59";
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(16, 95);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(171, 74);
+            this.button2.TabIndex = 19;
+            this.button2.Text = "Комментарии пользователей";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Coments
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox2);
@@ -184,6 +197,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Coments";
             this.Text = "Coments";
+            this.Load += new System.EventHandler(this.Coments_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,5 +218,6 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button2;
     }
 }

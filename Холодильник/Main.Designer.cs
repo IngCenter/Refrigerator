@@ -1,4 +1,4 @@
-﻿namespace Fridgerator
+namespace Fridgerator
 {
     partial class Main
     {
@@ -89,6 +89,60 @@
             // cookButton
             // 
             this.cookButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cookButton.Location = new System.Drawing.Point(10, 131);
+            this.cookButton.Name = "cookButton";
+            this.cookButton.Size = new System.Drawing.Size(131, 115);
+            this.cookButton.TabIndex = 5;
+            this.cookButton.Text = "Приготовить что-то";
+            this.cookButton.UseVisualStyleBackColor = true;
+            this.cookButton.Click += new System.EventHandler(this.CookingRecipes_Click);
+            // 
+            // fridgeButton
+            // 
+            this.fridgeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.fridgeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.fridgeButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.fridgeButton.Location = new System.Drawing.Point(147, 11);
+            this.fridgeButton.Name = "fridgeButton";
+            this.fridgeButton.Size = new System.Drawing.Size(111, 234);
+            this.fridgeButton.TabIndex = 3;
+            this.fridgeButton.Text = "Техническое состояние и обслуживание";
+            this.fridgeButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.fridgeButton.UseVisualStyleBackColor = true;
+            this.fridgeButton.Click += new System.EventHandler(this.Fridge_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(264, 11);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(141, 74);
+            this.button1.TabIndex = 7;
+            this.button1.TabStop = false;
+            this.button1.Text = "Коментарии";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Main
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(417, 264);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cookButton);
+            this.Controls.Add(this.addProductsButton);
+            this.Controls.Add(this.fridgeButton);
+            this.Controls.Add(this.contents);
+            this.Controls.Add(this.countButton);
+            this.MaximumSize = new System.Drawing.Size(433, 303);
+            this.MinimumSize = new System.Drawing.Size(433, 303);
+            this.Name = "Main";
+            this.Text = "Панель управления";
+            this.ResumeLayout(false);
+            // 
+            // cookButton
+            // 
+            this.cookButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cookButton.Location = new System.Drawing.Point(13, 161);
             this.cookButton.Margin = new System.Windows.Forms.Padding(4);
             this.cookButton.Name = "cookButton";
@@ -155,12 +209,9 @@
             this.Name = "Main";
             this.Text = "Панель управления";
             this.ResumeLayout(false);
-
         }
 
         #endregion
-
-        private System.Windows.Forms.Button deadProducts;
         private System.Windows.Forms.Button countButton;
         private System.Windows.Forms.Button contents;
         private System.Windows.Forms.Button fridgeButton;
@@ -168,6 +219,7 @@
         private System.Windows.Forms.Button cookButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button adminButton;
+        private System.Windows.Forms.Button deadProducts;
     }
 }
 

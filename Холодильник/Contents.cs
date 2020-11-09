@@ -26,7 +26,7 @@ namespace Fridgerator
             int y = 30;
 
             Label nameLabel = new Label { Text = "Имя", Location = new Point(labelsX[0], y) };
-            Label dateBeginLabel = new Label { Text = "День рождения", Location = new Point(labelsX[1], y) };
+            Label dateBeginLabel = new Label { Text = "Когда куплены", Location = new Point(labelsX[1], y) };
             Label lifeTimeLabel = new Label { Text = "Срок годности", Location = new Point(labelsX[2], y) };
             Label countLabel = new Label { Text = "Количество", Location = new Point(labelsX[3], y) };
 

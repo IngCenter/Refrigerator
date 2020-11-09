@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -54,6 +54,18 @@
     </Compile>
     <Compile Include="AddRecipe.Designer.cs">
       <DependentUpon>AddRecipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AdminServices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminServices.Designer.cs">
+      <DependentUpon>AdminServices.cs</DependentUpon>
     </Compile>
     <Compile Include="Coments.cs">
       <SubType>Form</SubType>
@@ -119,6 +131,12 @@
     </Compile>
     <EmbeddedResource Include="AddRecipe.resx">
       <DependentUpon>AddRecipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminServices.resx">
+      <DependentUpon>AdminServices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Coments.resx">
       <DependentUpon>Coments.cs</DependentUpon>

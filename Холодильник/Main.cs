@@ -79,6 +79,12 @@ namespace Fridgerator
             Coments coments = new Coments();
             coments.ShowDialog();
         }
+
+        private void AdminButton_Click(object sender, EventArgs e)
+        {
+            Admin admin = new Admin();
+            admin.Show();
+        }
     }
 
     public struct Product

@@ -14,12 +14,22 @@ namespace Fridgerator
     {
         public VisualComents()
         {
-            Program.Select("SELECT * FROM Comments");
+            InitializeComponent();
 
             int x = 55;
 
-            //Все испорченные продукты
+            //Все комментарии
             List<string> VisualComents = Program.Select("SELECT * FROM Comments");
+            dataGridView1.Rows.Clear();
+            for (int i = 0; i < VisualComents.Count; i += 4)
+            {
+                string[] row = new string[4];
+                row[0] = VisualComents[i];
+                row[1] = VisualComents[i + 1];
+                row[2] = VisualComents[i + 2];
+                row[3] = VisualComents[i + 3];
+                dataGridView1.Rows.Add(row);
+            }
 
             //Тут 6 столбцов
             for (int i = 0; i < VisualComents.Count; i += 4)
@@ -68,8 +78,6 @@ namespace Fridgerator
 
                 x += 150;
             }
-
-            InitializeComponent();
         }
 
         private void VisualComents_Load(object sender, EventArgs e)

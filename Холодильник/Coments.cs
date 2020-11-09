@@ -28,5 +28,16 @@ namespace Fridgerator
             Program.Insert("INSERT INTO `Comments` (`Product`,CommentText,Raiting,Time) VALUES ('" + textBox1.Text + "','" + textBox4.Text + "','" + textBox5.Text + "','" + textBox2.Text + "')");
             MessageBox.Show("Сохранено");
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            VisualComents f = new VisualComents();
+            f.ShowDialog();
+        }
+
+        private void Coments_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

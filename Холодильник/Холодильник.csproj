@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -123,6 +123,12 @@
     <Compile Include="CookingRecipes.Designer.cs">
       <DependentUpon>CookingRecipes.cs</DependentUpon>
     </Compile>
+    <Compile Include="VisualComents.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VisualComents.Designer.cs">
+      <DependentUpon>VisualComents.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddRecipe.resx">
       <DependentUpon>AddRecipe.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +174,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CookingRecipes.resx">
       <DependentUpon>CookingRecipes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisualComents.resx">
+      <DependentUpon>VisualComents.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

@@ -37,12 +37,6 @@ namespace Fridgerator
             MessageBox.Show("Количество: " + count, "Количество продуктов");
         }
 
-        private void DeadProducts_Click(object sender, EventArgs e)
-        {
-            DeadProducts f = new DeadProducts();
-            f.ShowDialog();
-        }
-
         private void Contents_Click(object sender, EventArgs e)
         {
             if (ProductList.Count == 0)

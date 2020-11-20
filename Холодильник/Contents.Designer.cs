@@ -35,10 +35,12 @@
             this.ProductCount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.updateButton = new System.Windows.Forms.Button();
             this.nameLabel = new System.Windows.Forms.Label();
-            this.nameTB = new System.Windows.Forms.TextBox();
             this.unitCB = new System.Windows.Forms.ComboBox();
             this.unitLabel = new System.Windows.Forms.Label();
             this.deadCheckBox = new System.Windows.Forms.CheckBox();
+            this.nameCB = new System.Windows.Forms.ComboBox();
+            this.typeCB = new System.Windows.Forms.ComboBox();
+            this.typeLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,23 +111,9 @@
             this.nameLabel.TabIndex = 2;
             this.nameLabel.Text = "Название";
             // 
-            // nameTB
-            // 
-            this.nameTB.Location = new System.Drawing.Point(12, 43);
-            this.nameTB.Name = "nameTB";
-            this.nameTB.Size = new System.Drawing.Size(177, 38);
-            this.nameTB.TabIndex = 3;
-            // 
             // unitCB
             // 
-            this.unitCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.unitCB.FormattingEnabled = true;
-            this.unitCB.Items.AddRange(new object[] {
-            "л",
-            "кг",
-            "шт",
-            "г",
-            " "});
             this.unitCB.Location = new System.Drawing.Point(224, 43);
             this.unitCB.Name = "unitCB";
             this.unitCB.Size = new System.Drawing.Size(121, 39);
@@ -144,21 +132,48 @@
             // 
             this.deadCheckBox.AutoSize = true;
             this.deadCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.deadCheckBox.Location = new System.Drawing.Point(379, 35);
+            this.deadCheckBox.Location = new System.Drawing.Point(586, 35);
             this.deadCheckBox.Name = "deadCheckBox";
-            this.deadCheckBox.Size = new System.Drawing.Size(205, 35);
+            this.deadCheckBox.Size = new System.Drawing.Size(219, 35);
             this.deadCheckBox.TabIndex = 6;
-            this.deadCheckBox.Text = "Пророченное";
+            this.deadCheckBox.Text = "Проcроченное";
             this.deadCheckBox.UseVisualStyleBackColor = true;
+            // 
+            // nameCB
+            // 
+            this.nameCB.FormattingEnabled = true;
+            this.nameCB.Location = new System.Drawing.Point(18, 43);
+            this.nameCB.Name = "nameCB";
+            this.nameCB.Size = new System.Drawing.Size(177, 39);
+            this.nameCB.TabIndex = 7;
+            // 
+            // typeCB
+            // 
+            this.typeCB.FormattingEnabled = true;
+            this.typeCB.Location = new System.Drawing.Point(372, 43);
+            this.typeCB.Name = "typeCB";
+            this.typeCB.Size = new System.Drawing.Size(181, 39);
+            this.typeCB.TabIndex = 4;
+            // 
+            // typeLabel
+            // 
+            this.typeLabel.AutoSize = true;
+            this.typeLabel.Location = new System.Drawing.Point(366, 9);
+            this.typeLabel.Name = "typeLabel";
+            this.typeLabel.Size = new System.Drawing.Size(61, 31);
+            this.typeLabel.TabIndex = 5;
+            this.typeLabel.Text = "Тип";
             // 
             // Contents
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(1025, 461);
+            this.Controls.Add(this.nameCB);
             this.Controls.Add(this.deadCheckBox);
+            this.Controls.Add(this.typeLabel);
             this.Controls.Add(this.unitLabel);
+            this.Controls.Add(this.typeCB);
             this.Controls.Add(this.unitCB);
-            this.Controls.Add(this.nameTB);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.updateButton);
             this.Controls.Add(this.dataGridView1);
@@ -182,9 +197,11 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ProductCount;
         private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Label nameLabel;
-        private System.Windows.Forms.TextBox nameTB;
         private System.Windows.Forms.ComboBox unitCB;
         private System.Windows.Forms.Label unitLabel;
         private System.Windows.Forms.CheckBox deadCheckBox;
+        private System.Windows.Forms.ComboBox nameCB;
+        private System.Windows.Forms.ComboBox typeCB;
+        private System.Windows.Forms.Label typeLabel;
     }
 }

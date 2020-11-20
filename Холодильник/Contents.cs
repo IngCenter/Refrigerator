@@ -15,6 +15,22 @@ namespace Fridgerator
         public Contents()
         {
             InitializeComponent();
+
+            List<string> products = Program.Select("SELECT DISTINCT Name FROM Products ORDER BY Name");
+            List<string> units = Program.Select("SELECT DISTINCT Unit FROM Products ORDER BY Unit");
+            List<string> type = Program.Select("SELECT DISTINCT Type FROM Products ORDER BY Type");
+
+            nameCB.Items.Clear();
+            nameCB.Items.Add("");
+            nameCB.Items.AddRange(products.ToArray());
+
+            unitCB.Items.Clear();
+            unitCB.Items.Add("");
+            unitCB.Items.AddRange(units.ToArray());
+
+            typeCB.Items.Clear();
+            typeCB.Items.Add("");
+            typeCB.Items.AddRange(type.ToArray());
         }
 
         private void Contents_Load(object sender, EventArgs e)
@@ -52,11 +68,14 @@ namespace Fridgerator
             string command = "SELECT Name, DateBegin, LifeTime, Unit, Count FROM Products WHERE 1";
 
 
-            if (!string.IsNullOrWhiteSpace(nameTB.Text))
-                command += " AND Name LIKE '%" + nameTB.Text +"%'";
+            if (!string.IsNullOrWhiteSpace(nameCB.Text))
+                command += " AND Name LIKE '%" + nameCB.Text +"%'";
 
             if (!string.IsNullOrWhiteSpace(unitCB.Text))
                 command += " AND Unit = '" + unitCB.Text + "'";
+
+            if (!string.IsNullOrWhiteSpace(typeCB.Text))
+                command += " AND Type = '" + typeCB.Text + "'";
 
             if (deadCheckBox.Checked)
                 command += " AND DATEDIFF(CURDATE(), DateBegin) > LifeTime";

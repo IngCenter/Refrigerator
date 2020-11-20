@@ -15,74 +15,100 @@ namespace Fridgerator
         public VisualComents()
         {
             InitializeComponent();
+           
 
-            int x = 55;
-
-            //Все комментарии
-            List<string> VisualComents = Program.Select("SELECT * FROM Comments");
-            dataGridView1.Rows.Clear();
-            for (int i = 0; i < VisualComents.Count; i += 4)
-            {
-                string[] row = new string[4];
-                row[0] = VisualComents[i];
-                row[1] = VisualComents[i + 1];
-                row[2] = VisualComents[i + 2];
-                row[3] = VisualComents[i + 3];
-                dataGridView1.Rows.Add(row);
-            }
-
-            //Тут 6 столбцов
-            for (int i = 0; i < VisualComents.Count; i += 4)
-            {
-                //0-Название, 4 - Количество
-                TextBox Products = new TextBox
-                {
-                    AutoSize = false,
-                    Font = new Font("Arial", 12),
-                    Location = new Point(x, 30),
-                    Size = new Size(140, 30),
-                    Text = VisualComents[i]
-                };
-
-                TextBox b = new TextBox
-                {
-                    AutoSize = false,
-                    Font = new Font("Arial", 12),
-                    Location = new Point(x, 120),
-                    Size = new Size(140, 30),
-                    Text = VisualComents[i + 1]
-                };
-
-                TextBox c = new TextBox
-                {
-                    AutoSize = false,
-                    Font = new Font("Arial", 12),
-                    Location = new Point(x, 175),
-                    Size = new Size(140, 30),
-                    Text = VisualComents[i + 2]
-                };
-
-                TextBox d = new TextBox
-                {
-                    AutoSize = false,
-                    Font = new Font("Arial", 12),
-                    Location = new Point(x, 230),
-                    Size = new Size(140, 30),
-                    Text = VisualComents[i + 3]
-                };
-
-                Controls.Add(Products);
-                Controls.Add(b);
-                Controls.Add(c);
-                Controls.Add(d);
-
-                x += 150;
-            }
+            
         }
 
         private void VisualComents_Load(object sender, EventArgs e)
         {
             
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void кноп_Click(object sender, EventArgs e)
+        {
+         
+        }
+
+
+
+        private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+
+            if (e.ColumnIndex == 3)
+            {
+                string id =
+                dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                string raiting =
+                dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+
+                Program.Insert("UPDATE Comments SET Raiting = " + raiting + " Where Id = " + id);
+                MessageBox.Show("Обновлено");
+            }
+            
+            if (e.ColumnIndex == 2)
+            {
+                string id =
+                dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                string CommentText =
+                dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+                
+
+                Program.Insert("UPDATE Comments SET CommentText = '" + CommentText + "' Where Id = " + id);
+                MessageBox.Show("Обновлено");
+            }
+
+            if (e.ColumnIndex == 0)
+            {
+                string id =
+                dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+                string Product =
+                dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+
+
+                Program.Insert("UPDATE Comments SET Product = '" + Product + "' Where Id = " + id);
+                MessageBox.Show("Обновлено");
+            }
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string command = "SELECT * FROM Comments WHERE 1";
+
+            if (comboBox1.Text != "")
+            {
+                command = command + " AND product = '" + comboBox1.Text + "'";
+            }
+
+            if (comboBox2.Text != "")
+            {
+                command = command + " AND Raiting = '" + comboBox2.Text + "'";
+            }
+
+            //Все комментарии
+            List<string> VisualComents = Program.Select(command);
+            dataGridView1.Rows.Clear();
+            for (int i = 0; i < VisualComents.Count; i += 5)
+            {
+                string[] row = new string[5];
+                row[0] = VisualComents[i];
+                row[1] = VisualComents[i + 1];
+                row[2] = VisualComents[i + 2];
+                row[3] = VisualComents[i + 3];
+                row[4] = VisualComents[i + 4];
+                dataGridView1.Rows.Add(row);
+            }
+
         }
     }
 }

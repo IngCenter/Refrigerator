@@ -32,13 +32,16 @@ namespace Fridgerator
         /// <summary>
         /// Select-запрос
         /// </summary>
-        public static List<string> Select(string Text)
+        public static List<string> Select(string Text, Dictionary<string, string> parameters = null)
         {
-            //Результат
             List<string> results = new List<string>();
-            //Создать команду
+
             MySqlCommand command = new MySqlCommand(Text, Connection);
-            //Выполнить команду
+
+            if (parameters != null)
+                foreach (var pair in parameters)
+                    command.Parameters.AddWithValue(pair.Key, pair.Value);
+
             DbDataReader reader = command.ExecuteReader();
 
             while (reader.Read())

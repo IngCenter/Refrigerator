@@ -24,8 +24,49 @@ namespace Fridgerator
 
         private void AddRecipeButton_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(textBox1.Text) || string.IsNullOrEmpty(textBox2.Text + textBox3.Text))
+            {
+                MessageBox.Show("Не оставляйте пустые поля!");
+                return;
+            }
+
+            foreach (Control control0 in flowLayoutPanel1.Controls)
+            {
+                if (control0 is Button)
+                {
+                    if (control0.Text == "Тип" || string.IsNullOrWhiteSpace(control0.Text))
+                        continue;
+
+                    string type = "", count = "", unit = "";
+
+                    foreach (Control control in flowLayoutPanel1.Controls)
+                    {
+                        if (control.Location.Y == control0.Location.Y && control.Tag != null)
+                        {
+                            switch (control.Tag.ToString())
+                            {
+                                case "type":
+                                    type = control.Text;
+                                    break;
+
+                                case "count":
+                                    count = ((NumericUpDown)control).Value.ToString();
+                                    break;
+
+                                case "unit":
+                                    unit = control.Text;
+                                    break;
+                            }
+                        }
+                    }
+
+                    Program.Insert("INSERT INTO RecipesContents (Name, Type, Count, Unit) " +
+                                   $"VALUES ('{textBox1.Text}', '{type}', '{count}', '{unit}')");
+                }
+            }
+
             Program.Insert("INSERT INTO `Recipes` (`OutName`,Description,Script) VALUES ('" + textBox1.Text + "','"+ textBox2.Text + "','" + textBox3.Text + "')");
-            //Program.Insert("INSERT INTO `RecipesContents` (``, ``)");
+
             MessageBox.Show("Сохранено");
         }
 
@@ -38,8 +79,10 @@ namespace Fridgerator
                 Text = delete.Text,
                 ForeColor = delete.ForeColor,
                 BackColor = delete.BackColor,
-                FlatStyle = delete.FlatStyle
+                FlatStyle = delete.FlatStyle,
             };
+
+            button.Click += Delete_Click;
 
             ComboBox comboBox = new ComboBox
             {
@@ -65,6 +108,23 @@ namespace Fridgerator
             };
 
             flowLayoutPanel1.Controls.AddRange(new Control[4] { button, typeTb, num, comboBox });
+        }
+
+        private void Delete_Click(object sender, EventArgs e)
+        {
+            Control deleteButton = sender as Control;
+
+            List<Control> controlsToDelete = new List<Control>
+            {
+                deleteButton
+            };
+
+            foreach (Control control1 in flowLayoutPanel1.Controls)
+                if (control1 != deleteButton && control1.Location.Y == deleteButton.Location.Y)
+                    controlsToDelete.Add(control1);
+
+            foreach (var delete in controlsToDelete)
+                flowLayoutPanel1.Controls.Remove(delete);
         }
     }
 }

@@ -30,13 +30,6 @@ namespace Fridgerator
 
         }
 
-        private void кноп_Click(object sender, EventArgs e)
-        {
-         
-        }
-
-
-
         private void dataGridView1_CellEndEdit(object sender, DataGridViewCellEventArgs e)
         {
 
@@ -84,28 +77,31 @@ namespace Fridgerator
         private void button1_Click(object sender, EventArgs e)
         {
             string command = "SELECT * FROM Comments WHERE 1";
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
 
             if (comboBox1.Text != "")
             {
-                command = command + " AND product = '" + comboBox1.Text + "'";
+                parameters.Add("product", comboBox1.Text);
+                command += " AND product = ?product";
             }
 
             if (comboBox2.Text != "")
             {
-                command = command + " AND Raiting = '" + comboBox2.Text + "'";
+                parameters.Add("raiting", comboBox2.Text);
+                command += " AND Raiting = ?raiting";
             }
 
-            //Все комментарии
-            List<string> VisualComents = Program.Select(command);
+            List<string> visualComents = Program.Select(command, parameters);
+
             dataGridView1.Rows.Clear();
-            for (int i = 0; i < VisualComents.Count; i += 5)
+            for (int i = 0; i < visualComents.Count; i += 5)
             {
                 string[] row = new string[5];
-                row[0] = VisualComents[i];
-                row[1] = VisualComents[i + 1];
-                row[2] = VisualComents[i + 2];
-                row[3] = VisualComents[i + 3];
-                row[4] = VisualComents[i + 4];
+                row[0] = visualComents[i];
+                row[1] = visualComents[i + 1];
+                row[2] = visualComents[i + 2];
+                row[3] = visualComents[i + 3];
+                row[4] = visualComents[i + 4];
                 dataGridView1.Rows.Add(row);
             }
 

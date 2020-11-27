@@ -135,6 +135,7 @@
             this.delete.TabIndex = 29;
             this.delete.Text = "-";
             this.delete.UseVisualStyleBackColor = false;
+            this.delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // typeTextBox
             // 
@@ -149,8 +150,7 @@
             // countNum
             // 
             this.countNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.countNum.Location = new System.Drawing.Point(315, 4);
-            this.countNum.Margin = new System.Windows.Forms.Padding(4);
+            this.countNum.Location = new System.Drawing.Point(314, 3);
             this.countNum.Name = "countNum";
             this.countNum.Size = new System.Drawing.Size(97, 38);
             this.countNum.TabIndex = 12;
@@ -166,7 +166,7 @@
             "г",
             "л",
             "мл"});
-            this.units.Location = new System.Drawing.Point(419, 3);
+            this.units.Location = new System.Drawing.Point(417, 3);
             this.units.Name = "units";
             this.units.Size = new System.Drawing.Size(98, 39);
             this.units.TabIndex = 26;
@@ -195,8 +195,7 @@
             // 
             // AddRecipe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(725, 670);
             this.Controls.Add(this.addProduct);
             this.Controls.Add(this.label4);

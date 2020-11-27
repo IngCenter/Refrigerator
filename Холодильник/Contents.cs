@@ -66,21 +66,30 @@ namespace Fridgerator
         private void UpdateButton_Click(object sender, EventArgs e)
         {
             string command = "SELECT Name, DateBegin, LifeTime, Unit, Count FROM Products WHERE 1";
-
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
 
             if (!string.IsNullOrWhiteSpace(nameCB.Text))
-                command += " AND Name LIKE '%" + nameCB.Text +"%'";
+            {
+                parameters.Add("name", nameCB.Text);
+                command += " AND Name = ?name";
+            }
 
             if (!string.IsNullOrWhiteSpace(unitCB.Text))
-                command += " AND Unit = '" + unitCB.Text + "'";
+            {
+                parameters.Add("unit", unitCB.Text);
+                command += " AND Unit = ?unit";
+            }
 
             if (!string.IsNullOrWhiteSpace(typeCB.Text))
-                command += " AND Type = '" + typeCB.Text + "'";
+            {
+                parameters.Add("type", typeCB.Text);
+                command += " AND Type = ?type";
+            }
 
             if (deadCheckBox.Checked)
                 command += " AND DATEDIFF(CURDATE(), DateBegin) > LifeTime";
 
-            List<string> products = Program.Select(command);
+            List<string> products = Program.Select(command, parameters);
 
             UpdateTable(products);
         }

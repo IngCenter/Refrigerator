@@ -79,6 +79,12 @@ namespace Fridgerator
             Admin admin = new Admin();
             admin.Show();
         }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            Autarization autarization = new Autarization();
+            autarization.ShowDialog();
+        }
     }
 
     public struct Product

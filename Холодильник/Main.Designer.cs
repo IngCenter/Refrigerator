@@ -34,6 +34,7 @@ namespace Fridgerator
             this.contents = new System.Windows.Forms.Button();
             this.cookButton = new System.Windows.Forms.Button();
             this.fridgeButton = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // addProductsButton
@@ -113,11 +114,23 @@ namespace Fridgerator
             this.fridgeButton.UseVisualStyleBackColor = true;
             this.fridgeButton.Click += new System.EventHandler(this.Fridge_Click);
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(358, 87);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(142, 97);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Авторизация";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(553, 315);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cookButton);
             this.Controls.Add(this.addProductsButton);
@@ -140,6 +153,7 @@ namespace Fridgerator
         private System.Windows.Forms.Button cookButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button adminButton;
+        private System.Windows.Forms.Button button2;
     }
 }
 

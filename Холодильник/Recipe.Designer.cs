@@ -30,7 +30,7 @@
         {
             this.comboRecipe = new System.Windows.Forms.ComboBox();
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.button1 = new System.Windows.Forms.Button();
+            this.cookButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
@@ -42,7 +42,7 @@
             this.comboRecipe.Location = new System.Drawing.Point(21, 44);
             this.comboRecipe.Margin = new System.Windows.Forms.Padding(5);
             this.comboRecipe.Name = "comboRecipe";
-            this.comboRecipe.Size = new System.Drawing.Size(286, 32);
+            this.comboRecipe.Size = new System.Drawing.Size(286, 37);
             this.comboRecipe.TabIndex = 0;
             // 
             // numericUpDown1
@@ -50,19 +50,19 @@
             this.numericUpDown1.Location = new System.Drawing.Point(354, 44);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(5);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(82, 29);
+            this.numericUpDown1.Size = new System.Drawing.Size(82, 34);
             this.numericUpDown1.TabIndex = 1;
             // 
-            // button1
+            // cookButton
             // 
-            this.button1.Location = new System.Drawing.Point(746, 351);
-            this.button1.Margin = new System.Windows.Forms.Padding(5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(160, 42);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Приготовить";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.cookButton.Location = new System.Drawing.Point(717, 351);
+            this.cookButton.Margin = new System.Windows.Forms.Padding(5);
+            this.cookButton.Name = "cookButton";
+            this.cookButton.Size = new System.Drawing.Size(189, 42);
+            this.cookButton.TabIndex = 2;
+            this.cookButton.Text = "Приготовить";
+            this.cookButton.UseVisualStyleBackColor = true;
+            this.cookButton.Click += new System.EventHandler(this.CookButton_Click);
             // 
             // button2
             // 
@@ -76,11 +76,11 @@
             // 
             // Recipe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(918, 410);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.cookButton);
             this.Controls.Add(this.numericUpDown1);
             this.Controls.Add(this.comboRecipe);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
@@ -96,7 +96,7 @@
 
         private System.Windows.Forms.ComboBox comboRecipe;
         private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button cookButton;
         private System.Windows.Forms.Button button2;
     }
 }

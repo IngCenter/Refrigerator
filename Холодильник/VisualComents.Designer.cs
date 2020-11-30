@@ -51,7 +51,7 @@
             this.Column4,
             this.ID});
             this.dataGridView1.Location = new System.Drawing.Point(13, 93);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -91,22 +91,24 @@
             // ID
             // 
             this.ID.HeaderText = "id";
+            this.ID.MinimumWidth = 6;
             this.ID.Name = "ID";
+            this.ID.Width = 125;
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(13, 42);
+            this.comboBox1.Location = new System.Drawing.Point(17, 47);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(140, 21);
+            this.comboBox1.Size = new System.Drawing.Size(140, 25);
             this.comboBox1.TabIndex = 5;
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(357, 42);
+            this.comboBox2.Location = new System.Drawing.Point(355, 47);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(140, 21);
+            this.comboBox2.Size = new System.Drawing.Size(140, 25);
             this.comboBox2.TabIndex = 6;
             this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
@@ -126,13 +128,13 @@
             this.Название.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Название.Location = new System.Drawing.Point(12, 19);
             this.Название.Name = "Название";
-            this.Название.Size = new System.Drawing.Size(91, 20);
+            this.Название.Size = new System.Drawing.Size(107, 25);
             this.Название.TabIndex = 8;
             this.Название.Text = "Название";
             // 
             // VisualComents
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(676, 322);

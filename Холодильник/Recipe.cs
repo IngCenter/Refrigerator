@@ -22,9 +22,9 @@ namespace Fridgerator
                 comboRecipe.Items.Add(recipes[i]);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void CookButton_Click(object sender, EventArgs e)
         {
-
+            Program.Insert($"INSERT INTO `RecipesHistory` (`Recipe`, `Portions`, `CookDate`) VALUES (`{comboRecipe.Text}`, {1}, STR_TO_DATE({DateTime.Today.ToShortDateString()}, %d.%m.%y))");
         }
 
         private void button2_Click(object sender, EventArgs e)

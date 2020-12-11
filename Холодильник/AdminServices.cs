@@ -31,5 +31,16 @@ namespace Fridgerator
                 dataGridView1.Rows.Add(row);
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Admin admin = new Admin();
+            admin.Show();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

@@ -15,6 +15,22 @@ namespace Fridgerator
         public Contents()
         {
             InitializeComponent();
+
+            List<string> products = Program.Select("SELECT DISTINCT Name FROM Products ORDER BY Name");
+            List<string> units = Program.Select("SELECT DISTINCT Unit FROM Products ORDER BY Unit");
+            List<string> type = Program.Select("SELECT DISTINCT Type FROM Products ORDER BY Type");
+
+            nameCB.Items.Clear();
+            nameCB.Items.Add("");
+            nameCB.Items.AddRange(products.ToArray());
+
+            unitCB.Items.Clear();
+            unitCB.Items.Add("");
+            unitCB.Items.AddRange(units.ToArray());
+
+            typeCB.Items.Clear();
+            typeCB.Items.Add("");
+            typeCB.Items.AddRange(type.ToArray());
         }
 
         private void Contents_Load(object sender, EventArgs e)
@@ -50,18 +66,30 @@ namespace Fridgerator
         private void UpdateButton_Click(object sender, EventArgs e)
         {
             string command = "SELECT Name, DateBegin, LifeTime, Unit, Count FROM Products WHERE 1";
+            Dictionary<string, string> parameters = new Dictionary<string, string>();
 
-
-            if (!string.IsNullOrWhiteSpace(nameTB.Text))
-                command += " AND Name LIKE '%" + nameTB.Text +"%'";
+            if (!string.IsNullOrWhiteSpace(nameCB.Text))
+            {
+                parameters.Add("name", nameCB.Text);
+                command += " AND Name = ?name";
+            }
 
             if (!string.IsNullOrWhiteSpace(unitCB.Text))
-                command += " AND Unit = '" + unitCB.Text + "'";
+            {
+                parameters.Add("unit", unitCB.Text);
+                command += " AND Unit = ?unit";
+            }
+
+            if (!string.IsNullOrWhiteSpace(typeCB.Text))
+            {
+                parameters.Add("type", typeCB.Text);
+                command += " AND Type = ?type";
+            }
 
             if (deadCheckBox.Checked)
                 command += " AND DATEDIFF(CURDATE(), DateBegin) > LifeTime";
 
-            List<string> products = Program.Select(command);
+            List<string> products = Program.Select(command, parameters);
 
             UpdateTable(products);
         }

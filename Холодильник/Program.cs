@@ -10,6 +10,8 @@ namespace Fridgerator
     {
         public static MySqlConnection Connection;
 
+        public static string CurrentUser;
+
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>

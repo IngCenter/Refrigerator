@@ -67,6 +67,12 @@
     <Compile Include="AdminServices.Designer.cs">
       <DependentUpon>AdminServices.cs</DependentUpon>
     </Compile>
+    <Compile Include="Autarization.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Autarization.Designer.cs">
+      <DependentUpon>Autarization.cs</DependentUpon>
+    </Compile>
     <Compile Include="Coments.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminServices.resx">
       <DependentUpon>AdminServices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Autarization.resx">
+      <DependentUpon>Autarization.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Coments.resx">
       <DependentUpon>Coments.cs</DependentUpon>

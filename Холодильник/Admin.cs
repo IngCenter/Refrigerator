@@ -17,10 +17,61 @@ namespace Fridgerator
             InitializeComponent();
         }
 
-        private void AdminServicesButton_Click(object sender, EventArgs e)
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            AdminServices adminServices = new AdminServices();
-            adminServices.Show();
+           
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+
+            string dateFrom = dateTimePicker1.Value.ToString("yyyy-MM-dd");
+            string dateFrom2 = dateTimePicker2.Value.ToString("yyyy-MM-dd");
+            string command =           "SELECT RecipesContents.Product," +
+                                       " SUM(Portions * RecipesContents.Count)" +
+                                       " FROM RecipesHistory" +
+                                       " JOIN RecipesContents ON RecipesContents.RecipeName = RecipesHistory.Recipe" +
+                                       " WHERE CookDate < '" + dateFrom + "' AND CookDate > '" + dateFrom2 + "'";
+
+            if (comboBox1.Text != "")
+            {
+                ///
+            }
+            
+
+            command += " GROUP BY RecipesContents.Product";
+            List<string> x1 = Program.Select(command);
+
+            for (int i = 0; i < x1.Count; i += 2)
+            {
+                string[] row = new string[2];
+                row[0] = x1[i];
+                row[1] = x1[i + 1];
+
+                dataGridView1.Rows.Add(row);
+            }
+        }
+
+        private void Admin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

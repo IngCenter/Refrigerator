@@ -21,7 +21,7 @@ namespace Fridgerator
         {            
             List<string> products = Program.Select("SELECT * FROM Products");
 
-            for (int i = 0; i < products.Count; i += 6)
+            for (int i = 0; i < products.Count; i += 7)
                 ProductList.Add(new Product(products[i], DateTime.Parse(products[i + 1]), int.Parse(products[i + 2]), products[i + 3], int.Parse(products[i + 4]), products[i + 5]));
 
             InitializeComponent();
@@ -76,8 +76,14 @@ namespace Fridgerator
 
         private void AdminButton_Click(object sender, EventArgs e)
         {
-            Admin admin = new Admin();
+            AdminServices admin = new AdminServices();
             admin.Show();
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            Autarization autarization = new Autarization();
+            autarization.ShowDialog();
         }
     }
 

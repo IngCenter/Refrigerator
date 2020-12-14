@@ -40,10 +40,10 @@ namespace Fridgerator
             // addProductsButton
             // 
             this.addProductsButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.addProductsButton.Location = new System.Drawing.Point(9, 78);
-            this.addProductsButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.addProductsButton.Location = new System.Drawing.Point(8, 65);
+            this.addProductsButton.Margin = new System.Windows.Forms.Padding(4);
             this.addProductsButton.Name = "addProductsButton";
-            this.addProductsButton.Size = new System.Drawing.Size(186, 68);
+            this.addProductsButton.Size = new System.Drawing.Size(189, 68);
             this.addProductsButton.TabIndex = 4;
             this.addProductsButton.Text = "Добавить продукты";
             this.addProductsButton.UseVisualStyleBackColor = true;
@@ -51,22 +51,22 @@ namespace Fridgerator
             // 
             // adminButton
             // 
-            this.adminButton.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.adminButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold);
-            this.adminButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.adminButton.Location = new System.Drawing.Point(9, 224);
-            this.adminButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.adminButton.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.adminButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.adminButton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.adminButton.Location = new System.Drawing.Point(203, 211);
+            this.adminButton.Margin = new System.Windows.Forms.Padding(2);
             this.adminButton.Name = "adminButton";
-            this.adminButton.Size = new System.Drawing.Size(395, 38);
+            this.adminButton.Size = new System.Drawing.Size(201, 66);
             this.adminButton.TabIndex = 8;
-            this.adminButton.Text = "AdMiN";
+            this.adminButton.Text = "Админка";
             this.adminButton.UseVisualStyleBackColor = false;
             this.adminButton.Click += new System.EventHandler(this.AdminButton_Click);
             // 
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(203, 153);
+            this.button1.Location = new System.Drawing.Point(203, 140);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(201, 66);
             this.button1.TabIndex = 7;
@@ -75,11 +75,22 @@ namespace Fridgerator
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(8, 211);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(189, 65);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Авторизация";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.Button2_Click);
+            // 
             // contents
             // 
             this.contents.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.contents.Location = new System.Drawing.Point(203, 78);
-            this.contents.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.contents.Location = new System.Drawing.Point(202, 65);
+            this.contents.Margin = new System.Windows.Forms.Padding(4);
             this.contents.Name = "contents";
             this.contents.Size = new System.Drawing.Size(201, 68);
             this.contents.TabIndex = 2;
@@ -90,7 +101,7 @@ namespace Fridgerator
             // cookButton
             // 
             this.cookButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cookButton.Location = new System.Drawing.Point(9, 153);
+            this.cookButton.Location = new System.Drawing.Point(8, 140);
             this.cookButton.Name = "cookButton";
             this.cookButton.Size = new System.Drawing.Size(189, 66);
             this.cookButton.TabIndex = 5;
@@ -103,31 +114,20 @@ namespace Fridgerator
             this.fridgeButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.fridgeButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.fridgeButton.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.fridgeButton.Location = new System.Drawing.Point(9, 3);
+            this.fridgeButton.Location = new System.Drawing.Point(8, 12);
             this.fridgeButton.Name = "fridgeButton";
-            this.fridgeButton.Size = new System.Drawing.Size(395, 68);
+            this.fridgeButton.Size = new System.Drawing.Size(395, 46);
             this.fridgeButton.TabIndex = 3;
             this.fridgeButton.Text = "Техническое состояние и обслуживание";
             this.fridgeButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.fridgeButton.UseVisualStyleBackColor = true;
             this.fridgeButton.Click += new System.EventHandler(this.Fridge_Click);
             // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(358, 87);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(142, 97);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Авторизация";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.Button2_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 262);
+            this.ClientSize = new System.Drawing.Size(416, 289);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.cookButton);
@@ -135,11 +135,12 @@ namespace Fridgerator
             this.Controls.Add(this.fridgeButton);
             this.Controls.Add(this.contents);
             this.Controls.Add(this.adminButton);
-            this.MaximumSize = new System.Drawing.Size(432, 301);
-            this.MinimumSize = new System.Drawing.Size(432, 301);
+            this.MaximumSize = new System.Drawing.Size(432, 328);
+            this.MinimumSize = new System.Drawing.Size(432, 328);
             this.Name = "Main";
             this.Text = "Панель управления";
             this.ResumeLayout(false);
+
         }
 
         #endregion

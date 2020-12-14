@@ -43,3 +43,4 @@ C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridg
 C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.VisualComents.resources
 C:\Users\Даниел\source\repos\Refrigerator\Холодильник\obj\Debug\Fridgerator.VisualComents.resources
 C:\Users\Даниел\source\repos\Refrigerator\Холодильник\obj\Debug\Fridgerator.Autarization.resources
+C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.Autarization.resources

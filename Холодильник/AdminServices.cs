@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Fridgerator
 {
-    public partial class AdminServices : Form
+    public partial class AdminServices : UserControl
     {
         public AdminServices()
         {
@@ -35,7 +35,7 @@ namespace Fridgerator
         private void button1_Click(object sender, EventArgs e)
         {
             Admin admin = new Admin();
-            admin.Show();
+            admin.ShowDialog();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)

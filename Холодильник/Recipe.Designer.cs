@@ -47,7 +47,7 @@
             this.comboRecipe.Location = new System.Drawing.Point(12, 14);
             this.comboRecipe.Margin = new System.Windows.Forms.Padding(5);
             this.comboRecipe.Name = "comboRecipe";
-            this.comboRecipe.Size = new System.Drawing.Size(288, 37);
+            this.comboRecipe.Size = new System.Drawing.Size(288, 32);
             this.comboRecipe.TabIndex = 0;
             this.comboRecipe.SelectedIndexChanged += new System.EventHandler(this.ComboRecipe_SelectedIndexChanged);
             // 
@@ -56,7 +56,7 @@
             this.numericUpDown1.Location = new System.Drawing.Point(310, 17);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(5);
             this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(82, 34);
+            this.numericUpDown1.Size = new System.Drawing.Size(82, 29);
             this.numericUpDown1.TabIndex = 1;
             this.numericUpDown1.Value = new decimal(new int[] {
             1,
@@ -139,6 +139,7 @@
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Recipe";
             this.Text = "Recipe";
+            this.Load += new System.EventHandler(this.Recipe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

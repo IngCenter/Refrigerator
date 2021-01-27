@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Fridgerator
 {
-    public partial class Condition : Form
+    public partial class Condition : UserControl
     {
         public Condition()
         {
@@ -22,5 +22,12 @@ namespace Fridgerator
             Services f = new Services();
             f.ShowDialog();
         }
+
+        private void Condition_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

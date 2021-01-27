@@ -43,14 +43,30 @@ namespace Fridgerator
             if (parameters != null)
                 foreach (var pair in parameters)
                     command.Parameters.AddWithValue(pair.Key, pair.Value);
+            try
+            {
+                DbDataReader reader = command.ExecuteReader();
 
-            DbDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                    for (int i = 0; i < reader.FieldCount; i++)
+                        results.Add(reader.GetValue(i).ToString());
 
-            while (reader.Read())
-                for (int i = 0; i < reader.FieldCount; i++)
-                    results.Add(reader.GetValue(i).ToString());
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ошибка");
 
-            reader.Close();
+                string address = System.IO.Path.GetTempPath() + "Холодильник.txt";
+                if (!System.IO.File.Exists(address))
+                    System.IO.File.Create(address);
+
+
+                System.IO.File.AppendAllText(address, DateTime.Now.ToString() + Environment.NewLine + 
+                    ex.Message + Environment.NewLine +
+                    "Текст запроса: " + Text + Environment.NewLine + Environment.NewLine);
+
+            }
 
             return results;
         }

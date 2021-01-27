@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Fridgerator
 {
-    public partial class VisualComents : Form
+    public partial class VisualComents : UserControl
     {
         public VisualComents()
         {
@@ -105,6 +105,12 @@ namespace Fridgerator
                 dataGridView1.Rows.Add(row);
             }
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Coments coments = new Coments();
+            coments.ShowDialog();
         }
     }
 }

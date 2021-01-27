@@ -63,5 +63,10 @@ namespace Fridgerator
                 dataGridView1.Rows.Add(row);
             }
         }
+
+        private void Recipe_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Fridgerator
 {
-    public partial class Autarization : Form
+    public partial class Autarization : UserControl
     {
         public Autarization()
         {
@@ -28,7 +28,8 @@ namespace Fridgerator
             if (Logged != "0")
             {
                 Program.CurrentUser = textBox1.Text;
-                Close();
+                //Здесь должна сработать стрелка назад
+                //Close();
             }
 
             else if (WrongPass != "0")

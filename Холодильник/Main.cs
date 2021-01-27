@@ -47,19 +47,22 @@ namespace Fridgerator
             }
 
             Contents f = new Contents();
-            f.ShowDialog();
+           
+            panel1.Controls.Clear();
+            panel1.Controls.Add(f);
         }
 
         private void Fridge_Click(object sender, EventArgs e)
         {
             Condition f = new Condition();
-            f.ShowDialog();
+
+            panel1.Controls.Clear();
+            panel1.Controls.Add(f);
         }
 
         private void AddProducts_Click(object sender, EventArgs e)
         {
-            AddProducts f = new AddProducts();
-            f.ShowDialog();
+            
         }
 
         private void CookingRecipes_Click(object sender, EventArgs e)
@@ -70,20 +73,76 @@ namespace Fridgerator
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Coments coments = new Coments();
-            coments.ShowDialog();
+            VisualComents coments = new VisualComents();
+
+            panel1.Controls.Clear();
+            panel1.Controls.Add(coments);
         }
 
         private void AdminButton_Click(object sender, EventArgs e)
         {
             AdminServices admin = new AdminServices();
-            admin.Show();
+
+            panel1.Controls.Clear();
+            panel1.Controls.Add(admin);
         }
 
         private void Button2_Click(object sender, EventArgs e)
         {
             Autarization autarization = new Autarization();
-            autarization.ShowDialog();
+
+            panel1.Controls.Clear();
+            panel1.Controls.Add(autarization);
+        }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
+        {
+            UserControl rf = new UserControl();
+
+            if (e.Node.Text == "Коментарии")
+                rf = new VisualComents();
+            else if (e.Node.Text == "Админка")
+                rf = new AdminServices();
+            else if (e.Node.Text == "Авторизация")
+                rf = new Autarization();
+            else if (e.Node.Text == "Тех. обслуживание")
+                rf = new Condition();
+
+            panel1.Controls.Clear();
+            panel1.Controls.Add(rf);
+        }
+
+        private void Non_tree_Products(object sender, EventArgs e)
+        {
+            AddProducts f = new AddProducts();
+            f.ShowDialog();
+        }
+
+        private void Non_tree_Contents(object sender, EventArgs e)
+        {
+            Contents f = new Contents();
+            f.ShowDialog();
+        }
+
+        private void Non_tree_Recipe(object sender, EventArgs e)
+        {
+            Recipe f = new Recipe();
+            f.ShowDialog();
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 

@@ -32,7 +32,7 @@ namespace Fridgerator
         private void button2_Click(object sender, EventArgs e)
         {
             VisualComents f = new VisualComents();
-            f.ShowDialog();
+            f.Show();
         }
 
         private void Coments_Load(object sender, EventArgs e)

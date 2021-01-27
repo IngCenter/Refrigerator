@@ -54,7 +54,7 @@ namespace Fridgerator
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Fridgerator.Properties.Resources.Медведь;
+            //this.pictureBox1.Image = global::Fridgerator.Properties.Resources.Медведь;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(404, 271);

@@ -118,10 +118,8 @@ namespace Fridgerator
             else if (e.Node.Text == "Тех. обслуживание")
                 rf = new Condition();
 
-
             panel1.Controls.Clear();
             panel1.Controls.Add(rf);
-
         }
 
         private void Non_tree_Products(object sender, EventArgs e)

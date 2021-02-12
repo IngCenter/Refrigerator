@@ -62,13 +62,13 @@
       <DependentUpon>Admin.cs</DependentUpon>
     </Compile>
     <Compile Include="AdminServices.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="AdminServices.Designer.cs">
       <DependentUpon>AdminServices.cs</DependentUpon>
     </Compile>
     <Compile Include="Autarization.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Autarization.Designer.cs">
       <DependentUpon>Autarization.cs</DependentUpon>
@@ -79,11 +79,29 @@
     <Compile Include="Coments.Designer.cs">
       <DependentUpon>Coments.cs</DependentUpon>
     </Compile>
+    <Compile Include="Datchicki.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Datchicki.Designer.cs">
+      <DependentUpon>Datchicki.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kabelya.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kabelya.Designer.cs">
+      <DependentUpon>Kabelya.cs</DependentUpon>
+    </Compile>
     <Compile Include="Recipe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Recipe.Designer.cs">
       <DependentUpon>Recipe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Magaz.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Magaz.Designer.cs">
+      <DependentUpon>Magaz.cs</DependentUpon>
     </Compile>
     <Compile Include="Services.cs">
       <SubType>Form</SubType>
@@ -98,13 +116,13 @@
       <DependentUpon>AddProducts.cs</DependentUpon>
     </Compile>
     <Compile Include="Condition.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Condition.Designer.cs">
       <DependentUpon>Condition.cs</DependentUpon>
     </Compile>
     <Compile Include="Contents.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Contents.Designer.cs">
       <DependentUpon>Contents.cs</DependentUpon>
@@ -123,11 +141,23 @@
     <Compile Include="CookingRecipes.Designer.cs">
       <DependentUpon>CookingRecipes.cs</DependentUpon>
     </Compile>
-    <Compile Include="VisualComents.cs">
+    <Compile Include="Systemohlad.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Systemohlad.Designer.cs">
+      <DependentUpon>Systemohlad.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VisualComents.cs">
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="VisualComents.Designer.cs">
       <DependentUpon>VisualComents.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vstavni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vstavni.Designer.cs">
+      <DependentUpon>Vstavni.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AddRecipe.resx">
       <DependentUpon>AddRecipe.cs</DependentUpon>
@@ -146,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Recipe.resx">
       <DependentUpon>Recipe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Magaz.resx">
+      <DependentUpon>Magaz.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Services.resx">
       <DependentUpon>Services.cs</DependentUpon>
@@ -196,6 +229,9 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Медведь.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

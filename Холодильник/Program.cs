@@ -59,17 +59,14 @@ namespace Fridgerator
 
                 string address = System.IO.Path.GetTempPath() + "Холодильник.txt";
                 if (!System.IO.File.Exists(address))
-                {
-                    System.IO.FileStream f = System.IO.File.Create(address);
-                    f.Close();
-                }
+                    System.IO.File.Create(address);
+
 
                 System.IO.File.AppendAllText(address, DateTime.Now.ToString() + Environment.NewLine + 
                     ex.Message + Environment.NewLine +
                     "Текст запроса: " + Text + Environment.NewLine + Environment.NewLine);
-            }
 
-            command.Dispose();
+            }
 
             return results;
         }
@@ -81,8 +78,6 @@ namespace Fridgerator
 
             //Выполнить команду
             command.ExecuteNonQuery();
-
-            command.Dispose();
         }
     }
 }

@@ -55,12 +55,13 @@
             this.ProductLifetime,
             this.ProductCount});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 105);
+            this.dataGridView1.Location = new System.Drawing.Point(0, 128);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1025, 356);
+            this.dataGridView1.Size = new System.Drawing.Size(730, 327);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // ProductName
             // 
@@ -68,7 +69,7 @@
             this.ProductName.MinimumWidth = 6;
             this.ProductName.Name = "ProductName";
             this.ProductName.ReadOnly = true;
-            this.ProductName.Width = 320;
+            this.ProductName.Width = 150;
             // 
             // ProductBirthdate
             // 
@@ -83,6 +84,7 @@
             this.ProductLifetime.HeaderText = "Срок годности";
             this.ProductLifetime.MinimumWidth = 6;
             this.ProductLifetime.Name = "ProductLifetime";
+            this.ProductLifetime.ReadOnly = true;
             this.ProductLifetime.Width = 192;
             // 
             // ProductCount
@@ -90,11 +92,12 @@
             this.ProductCount.HeaderText = "Количество";
             this.ProductCount.MinimumWidth = 6;
             this.ProductCount.Name = "ProductCount";
-            this.ProductCount.Width = 192;
+            this.ProductCount.ReadOnly = true;
+            this.ProductCount.Width = 160;
             // 
             // updateButton
             // 
-            this.updateButton.Location = new System.Drawing.Point(832, 4);
+            this.updateButton.Location = new System.Drawing.Point(517, 13);
             this.updateButton.Name = "updateButton";
             this.updateButton.Size = new System.Drawing.Size(181, 95);
             this.updateButton.TabIndex = 1;
@@ -105,26 +108,26 @@
             // nameLabel
             // 
             this.nameLabel.AutoSize = true;
-            this.nameLabel.Location = new System.Drawing.Point(12, 9);
+            this.nameLabel.Location = new System.Drawing.Point(-3, 0);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(137, 31);
+            this.nameLabel.Size = new System.Drawing.Size(111, 26);
             this.nameLabel.TabIndex = 2;
             this.nameLabel.Text = "Название";
             // 
             // unitCB
             // 
             this.unitCB.FormattingEnabled = true;
-            this.unitCB.Location = new System.Drawing.Point(224, 43);
+            this.unitCB.Location = new System.Drawing.Point(191, 36);
             this.unitCB.Name = "unitCB";
-            this.unitCB.Size = new System.Drawing.Size(121, 39);
+            this.unitCB.Size = new System.Drawing.Size(121, 33);
             this.unitCB.TabIndex = 4;
             // 
             // unitLabel
             // 
             this.unitLabel.AutoSize = true;
-            this.unitLabel.Location = new System.Drawing.Point(218, 9);
+            this.unitLabel.Location = new System.Drawing.Point(186, 0);
             this.unitLabel.Name = "unitLabel";
-            this.unitLabel.Size = new System.Drawing.Size(128, 31);
+            this.unitLabel.Size = new System.Drawing.Size(105, 26);
             this.unitLabel.TabIndex = 5;
             this.unitLabel.Text = "Единицы";
             // 
@@ -132,9 +135,9 @@
             // 
             this.deadCheckBox.AutoSize = true;
             this.deadCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.deadCheckBox.Location = new System.Drawing.Point(586, 35);
+            this.deadCheckBox.Location = new System.Drawing.Point(3, 78);
             this.deadCheckBox.Name = "deadCheckBox";
-            this.deadCheckBox.Size = new System.Drawing.Size(219, 35);
+            this.deadCheckBox.Size = new System.Drawing.Size(178, 30);
             this.deadCheckBox.TabIndex = 6;
             this.deadCheckBox.Text = "Проcроченное";
             this.deadCheckBox.UseVisualStyleBackColor = true;
@@ -142,32 +145,31 @@
             // nameCB
             // 
             this.nameCB.FormattingEnabled = true;
-            this.nameCB.Location = new System.Drawing.Point(18, 43);
+            this.nameCB.Location = new System.Drawing.Point(3, 34);
             this.nameCB.Name = "nameCB";
-            this.nameCB.Size = new System.Drawing.Size(177, 39);
+            this.nameCB.Size = new System.Drawing.Size(177, 33);
             this.nameCB.TabIndex = 7;
             // 
             // typeCB
             // 
             this.typeCB.FormattingEnabled = true;
-            this.typeCB.Location = new System.Drawing.Point(372, 43);
+            this.typeCB.Location = new System.Drawing.Point(318, 36);
             this.typeCB.Name = "typeCB";
-            this.typeCB.Size = new System.Drawing.Size(181, 39);
+            this.typeCB.Size = new System.Drawing.Size(181, 33);
             this.typeCB.TabIndex = 4;
             // 
             // typeLabel
             // 
             this.typeLabel.AutoSize = true;
-            this.typeLabel.Location = new System.Drawing.Point(366, 9);
+            this.typeLabel.Location = new System.Drawing.Point(312, 2);
             this.typeLabel.Name = "typeLabel";
-            this.typeLabel.Size = new System.Drawing.Size(61, 31);
+            this.typeLabel.Size = new System.Drawing.Size(48, 26);
             this.typeLabel.TabIndex = 5;
             this.typeLabel.Text = "Тип";
             // 
             // Contents
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1025, 461);
             this.Controls.Add(this.nameCB);
             this.Controls.Add(this.deadCheckBox);
             this.Controls.Add(this.typeLabel);
@@ -179,8 +181,10 @@
             this.Controls.Add(this.dataGridView1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4);
+            this.MaximumSize = new System.Drawing.Size(730, 455);
+            this.MinimumSize = new System.Drawing.Size(730, 455);
             this.Name = "Contents";
-            this.Text = "Содержимое";
+            this.Size = new System.Drawing.Size(730, 455);
             this.Load += new System.EventHandler(this.Contents_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
@@ -191,10 +195,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductBirthdate;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductLifetime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ProductCount;
         private System.Windows.Forms.Button updateButton;
         private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.ComboBox unitCB;
@@ -203,5 +203,9 @@
         private System.Windows.Forms.ComboBox nameCB;
         private System.Windows.Forms.ComboBox typeCB;
         private System.Windows.Forms.Label typeLabel;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductBirthdate;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductLifetime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ProductCount;
     }
 }

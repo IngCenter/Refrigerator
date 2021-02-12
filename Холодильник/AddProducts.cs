@@ -83,12 +83,12 @@ namespace Fridgerator
 
             TextBox typeTb = new TextBox
             {
-                Location = new Point(typeTextBox.Location.X, y),
-                Size = typeTextBox.Size,
-                Font = typeTextBox.Font,
-                Text = typeTextBox.Text,
+                Location = new Point(comboBox1.Location.X, y),
+                Size = comboBox1.Size,
+                Font = comboBox1.Font,
+                Text = comboBox1.Text,
                 Tag = "type",
-                Margin = typeTextBox.Margin
+                Margin = comboBox1.Margin
             };
 
             mainPanel.Controls.AddRange(new Control[6] { button, tb, num, comboBox, dtp, typeTb });
@@ -168,6 +168,26 @@ namespace Fridgerator
 
             foreach (var delete in controlsToDelete)
                 mainPanel.Controls.Remove(delete);
+        }
+
+        private void dateBeginPicker_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void typeTextBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mainPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

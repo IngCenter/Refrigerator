@@ -117,20 +117,18 @@ namespace Fridgerator
                 rf = new Autarization();
             else if (e.Node.Text == "Тех. обслуживание")
                 rf = new Condition();
+            else if (e.Node.Text == "Содержимое")
+                rf = new Contents();
+
 
             panel1.Controls.Clear();
             panel1.Controls.Add(rf);
+
         }
 
         private void Non_tree_Products(object sender, EventArgs e)
         {
             AddProducts f = new AddProducts();
-            f.ShowDialog();
-        }
-
-        private void Non_tree_Contents(object sender, EventArgs e)
-        {
-            Contents f = new Contents();
             f.ShowDialog();
         }
 
@@ -143,6 +141,12 @@ namespace Fridgerator
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Non_tree_Sad(object sender, EventArgs e)
+        {
+            Magaz f = new Magaz();
+            f.ShowDialog();
         }
     }
 

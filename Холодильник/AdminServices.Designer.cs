@@ -45,12 +45,12 @@
             this.CityCol,
             this.TroubleCol,
             this.PriseCol});
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(-2, 0);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(410, 185);
+            this.dataGridView1.Size = new System.Drawing.Size(730, 366);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -85,9 +85,9 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(0, 190);
+            this.button1.Location = new System.Drawing.Point(0, 371);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(410, 84);
+            this.button1.Size = new System.Drawing.Size(727, 84);
             this.button1.TabIndex = 1;
             this.button1.Text = "Фильтр использованых продуктов за неделю";
             this.button1.UseVisualStyleBackColor = true;
@@ -101,7 +101,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AdminServices";
-            this.Size = new System.Drawing.Size(410, 277);
+            this.Size = new System.Drawing.Size(730, 455);
             this.Load += new System.EventHandler(this.AdminServices_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

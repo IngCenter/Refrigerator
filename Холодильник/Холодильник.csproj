@@ -98,7 +98,7 @@
       <DependentUpon>Recipe.cs</DependentUpon>
     </Compile>
     <Compile Include="Magaz.cs">
-      <SubType>Form</SubType>
+      <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Magaz.Designer.cs">
       <DependentUpon>Magaz.cs</DependentUpon>
@@ -173,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Coments.resx">
       <DependentUpon>Coments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kabelya.resx">
+      <DependentUpon>Kabelya.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Recipe.resx">
       <DependentUpon>Recipe.cs</DependentUpon>

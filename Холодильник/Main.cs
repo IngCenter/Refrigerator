@@ -107,6 +107,17 @@ namespace Fridgerator
 
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
+            if (e.Node.Text == "Добавить продукты")
+            {
+                AddProducts f = new AddProducts();
+                f.ShowDialog();
+            }
+            else if (e.Node.Text == "Приготовить что-то")
+            { 
+                Recipe f = new Recipe();
+                f.ShowDialog();
+            }
+
             UserControl rf = new UserControl();
 
             if (e.Node.Text == "Коментарии")
@@ -119,6 +130,8 @@ namespace Fridgerator
                 rf = new Condition();
             else if (e.Node.Text == "Содержимое")
                 rf = new Contents();
+            else if (e.Node.Text == "Магазин")
+                rf = new Magaz();
 
 
             panel1.Controls.Clear();
@@ -128,14 +141,10 @@ namespace Fridgerator
 
         private void Non_tree_Products(object sender, EventArgs e)
         {
-            AddProducts f = new AddProducts();
-            f.ShowDialog();
         }
 
         private void Non_tree_Recipe(object sender, EventArgs e)
         {
-            Recipe f = new Recipe();
-            f.ShowDialog();
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -143,11 +152,6 @@ namespace Fridgerator
 
         }
 
-        private void Non_tree_Sad(object sender, EventArgs e)
-        {
-            Magaz f = new Magaz();
-            f.ShowDialog();
-        }
     }
 
     public struct Product

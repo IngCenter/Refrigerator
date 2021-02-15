@@ -10,18 +10,17 @@ using System.Windows.Forms;
 
 namespace Fridgerator
 {
-    public partial class Magaz : Form
+    public partial class Magaz : UserControl
     {
         public Magaz()
         {
             InitializeComponent();
+
+            //tabPage2.Controls.Add(button3);
+            //В таком стиле можно че-то из базы пихать на нужную вкладку
         }
-
-
         private void button2_Click(object sender, EventArgs e)
         {
-            Magaz f = new Magaz();
-            f.ShowDialog();
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -46,6 +45,11 @@ namespace Fridgerator
         {
             Datchicki f = new Datchicki();
             f.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

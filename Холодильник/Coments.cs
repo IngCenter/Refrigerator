@@ -29,13 +29,8 @@ namespace Fridgerator
             MessageBox.Show("Сохранено");
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            VisualComents f = new VisualComents();
-            f.Show();
-        }
 
-        private void Coments_Load(object sender, EventArgs e)
+            private void Coments_Load(object sender, EventArgs e)
         {
 
         }

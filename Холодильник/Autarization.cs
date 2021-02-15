@@ -28,8 +28,7 @@ namespace Fridgerator
             if (Logged != "0")
             {
                 Program.CurrentUser = textBox1.Text;
-                //Здесь должна сработать стрелка назад
-                //Close();
+                
             }
 
             else if (WrongPass != "0")
@@ -37,6 +36,16 @@ namespace Fridgerator
 
             else
                 MessageBox.Show("This login is dead");
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Autarization_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

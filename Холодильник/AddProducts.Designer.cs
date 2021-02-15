@@ -34,9 +34,9 @@
             this.button2 = new System.Windows.Forms.Button();
             this.units = new System.Windows.Forms.ComboBox();
             this.delete = new System.Windows.Forms.Button();
-            this.typeTextBox = new System.Windows.Forms.TextBox();
             this.dateBeginPicker = new System.Windows.Forms.DateTimePicker();
             this.mainPanel = new System.Windows.Forms.FlowLayoutPanel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.countNum)).BeginInit();
             this.mainPanel.SuspendLayout();
             this.SuspendLayout();
@@ -47,17 +47,17 @@
             this.addTextBox.Location = new System.Drawing.Point(50, 4);
             this.addTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.addTextBox.Name = "addTextBox";
-            this.addTextBox.Size = new System.Drawing.Size(343, 38);
+            this.addTextBox.Size = new System.Drawing.Size(278, 32);
             this.addTextBox.TabIndex = 0;
             this.addTextBox.Text = "Название";
             // 
             // countNum
             // 
             this.countNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.countNum.Location = new System.Drawing.Point(401, 4);
+            this.countNum.Location = new System.Drawing.Point(336, 4);
             this.countNum.Margin = new System.Windows.Forms.Padding(4, 4, 4, 5);
             this.countNum.Name = "countNum";
-            this.countNum.Size = new System.Drawing.Size(97, 38);
+            this.countNum.Size = new System.Drawing.Size(118, 32);
             this.countNum.TabIndex = 12;
             this.countNum.Tag = "count";
             this.countNum.ValueChanged += new System.EventHandler(this.CountNum_ValueChanged);
@@ -98,10 +98,10 @@
             "г",
             "л",
             "мл"});
-            this.units.Location = new System.Drawing.Point(506, 4);
+            this.units.Location = new System.Drawing.Point(462, 4);
             this.units.Margin = new System.Windows.Forms.Padding(4);
             this.units.Name = "units";
-            this.units.Size = new System.Drawing.Size(98, 39);
+            this.units.Size = new System.Drawing.Size(114, 33);
             this.units.TabIndex = 26;
             this.units.Tag = "unit";
             this.units.SelectedIndexChanged += new System.EventHandler(this.Units_SelectedIndexChanged);
@@ -121,28 +121,18 @@
             this.delete.UseVisualStyleBackColor = false;
             this.delete.Click += new System.EventHandler(this.Delete_Click);
             // 
-            // typeTextBox
-            // 
-            this.typeTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.typeTextBox.Location = new System.Drawing.Point(771, 4);
-            this.typeTextBox.Margin = new System.Windows.Forms.Padding(4);
-            this.typeTextBox.Name = "typeTextBox";
-            this.typeTextBox.Size = new System.Drawing.Size(152, 38);
-            this.typeTextBox.TabIndex = 28;
-            this.typeTextBox.Tag = "type";
-            this.typeTextBox.Text = "Тип";
-            // 
             // dateBeginPicker
             // 
             this.dateBeginPicker.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dateBeginPicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.dateBeginPicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateBeginPicker.Location = new System.Drawing.Point(612, 4);
+            this.dateBeginPicker.Location = new System.Drawing.Point(584, 4);
             this.dateBeginPicker.Margin = new System.Windows.Forms.Padding(4);
             this.dateBeginPicker.Name = "dateBeginPicker";
-            this.dateBeginPicker.Size = new System.Drawing.Size(151, 38);
+            this.dateBeginPicker.Size = new System.Drawing.Size(151, 32);
             this.dateBeginPicker.TabIndex = 27;
             this.dateBeginPicker.Tag = "dateBegin";
+            this.dateBeginPicker.ValueChanged += new System.EventHandler(this.dateBeginPicker_ValueChanged);
             // 
             // mainPanel
             // 
@@ -152,16 +142,39 @@
             this.mainPanel.Controls.Add(this.countNum);
             this.mainPanel.Controls.Add(this.units);
             this.mainPanel.Controls.Add(this.dateBeginPicker);
-            this.mainPanel.Controls.Add(this.typeTextBox);
+            this.mainPanel.Controls.Add(this.comboBox1);
             this.mainPanel.Location = new System.Drawing.Point(12, 12);
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(952, 229);
             this.mainPanel.TabIndex = 0;
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Абстрактное",
+            "Животные",
+            "Жиры",
+            "Зелень",
+            "Крупа",
+            "Мясо",
+            "Напитки",
+            "Сыр"});
+            this.comboBox1.Location = new System.Drawing.Point(743, 4);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(188, 33);
+            this.comboBox1.TabIndex = 30;
+            this.comboBox1.Tag = "unit";
+            this.comboBox1.Text = "Тип";
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // AddProducts
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1182, 253);
+            this.ClientSize = new System.Drawing.Size(1184, 261);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.addAll);
@@ -169,7 +182,6 @@
             this.MaximumSize = new System.Drawing.Size(1200, 300);
             this.MinimumSize = new System.Drawing.Size(1200, 300);
             this.Name = "AddProducts";
-            this.Text = "Что я купил";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.countNum)).EndInit();
             this.mainPanel.ResumeLayout(false);
@@ -185,9 +197,9 @@
         private System.Windows.Forms.Button addAll;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.ComboBox units;
-        private System.Windows.Forms.TextBox typeTextBox;
         private System.Windows.Forms.DateTimePicker dateBeginPicker;
         private System.Windows.Forms.Button delete;
         private System.Windows.Forms.FlowLayoutPanel mainPanel;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }

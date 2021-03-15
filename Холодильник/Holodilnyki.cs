@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Fridgerator
 {
-    public partial class Vstavni : UserControl
+    public partial class Holodilnyki : UserControl
     {
-        public Vstavni()
+        public Holodilnyki()
         {
             InitializeComponent();
         }
 
-        private void Vstavni_Load(object sender, EventArgs e)
+        private void Holodilnyki_Load(object sender, EventArgs e)
         {
 
         }

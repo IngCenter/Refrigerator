@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Fridgerator
 {
-    public partial class Systemohlad : Form
+    public partial class Systemohlad : UserControl
     {
         public Systemohlad()
         {
             InitializeComponent();
+        }
+
+        private void Systemohlad_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Fridgerator
 {
-    public partial class Datchicki : Form
+    public partial class Datchicki : UserControl
     {
         public Datchicki()
         {
             InitializeComponent();
+        }
+
+        private void Datchicki_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

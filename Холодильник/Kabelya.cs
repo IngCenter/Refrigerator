@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Fridgerator
 {
-    public partial class Kabelya : Form
+    public partial class Kabelya : UserControl
     {
         public Kabelya()
         {
             InitializeComponent();
+        }
+
+        private void Kabelya_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

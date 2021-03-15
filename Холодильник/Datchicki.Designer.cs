@@ -29,10 +29,17 @@ namespace Fridgerator
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Datchicki
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Datchicki";
+            this.Name = "Datchicki";
+            this.Size = new System.Drawing.Size(590, 425);
+            this.Load += new System.EventHandler(this.Datchicki_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

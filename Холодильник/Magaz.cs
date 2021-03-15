@@ -82,6 +82,7 @@ namespace Fridgerator
 
         private void HolodilnikiButton_Click(object sender, EventArgs e)
         {
+            //ToDo ((Label)sender).Text вместо 5 функций
             panel1.Controls.Clear();
             List<string> Details = Program.Select("SELECT Name, Description FROM Details WHERE category ='Холодильники'");
             for (int i = 0; i < Details.Count; i += 2)
@@ -134,6 +135,7 @@ namespace Fridgerator
 
         private void KabelyaButton_Click(object sender, EventArgs e)
         {
+            //ToDO Тут не Select *
             List<string> Details = Program.Select("SELECT * FROM Details WHERE category ='Кабеля'");
             for (int i = 0; i < Details.Count; i += 2)
             {
@@ -207,6 +209,11 @@ namespace Fridgerator
 
                 panel1.Controls.Add(labelDiscription);
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

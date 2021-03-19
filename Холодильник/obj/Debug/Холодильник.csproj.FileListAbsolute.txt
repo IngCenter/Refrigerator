@@ -43,9 +43,5 @@ C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridg
 C:\Users\Даниел\source\repos\Refrigerator\Холодильник\obj\Debug\Fridgerator.VisualComents.resources
 C:\Users\Даниел\source\repos\Refrigerator\Холодильник\obj\Debug\Fridgerator.Autarization.resources
 C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.Autarization.resources
-C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.Datchicki.resources
-C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.Holodilnyki.resources
-C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.Kabelya.resources
 C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.Magaz.resources
-C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.Systemohlad.resources
-C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.Vstavni.resources
+C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.Details.resources

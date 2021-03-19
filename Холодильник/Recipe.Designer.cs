@@ -44,16 +44,16 @@
             // 
             this.comboRecipe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboRecipe.FormattingEnabled = true;
-            this.comboRecipe.Location = new System.Drawing.Point(12, 14);
+            this.comboRecipe.Location = new System.Drawing.Point(5, 14);
             this.comboRecipe.Margin = new System.Windows.Forms.Padding(5);
             this.comboRecipe.Name = "comboRecipe";
-            this.comboRecipe.Size = new System.Drawing.Size(288, 32);
+            this.comboRecipe.Size = new System.Drawing.Size(240, 32);
             this.comboRecipe.TabIndex = 0;
             this.comboRecipe.SelectedIndexChanged += new System.EventHandler(this.ComboRecipe_SelectedIndexChanged);
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(310, 17);
+            this.numericUpDown1.Location = new System.Drawing.Point(255, 15);
             this.numericUpDown1.Margin = new System.Windows.Forms.Padding(5);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(82, 29);
@@ -66,10 +66,10 @@
             // 
             // cookButton
             // 
-            this.cookButton.Location = new System.Drawing.Point(402, 9);
+            this.cookButton.Location = new System.Drawing.Point(347, 8);
             this.cookButton.Margin = new System.Windows.Forms.Padding(5);
             this.cookButton.Name = "cookButton";
-            this.cookButton.Size = new System.Drawing.Size(194, 42);
+            this.cookButton.Size = new System.Drawing.Size(172, 42);
             this.cookButton.TabIndex = 2;
             this.cookButton.Text = "Приготовить";
             this.cookButton.UseVisualStyleBackColor = true;
@@ -77,9 +77,9 @@
             // 
             // addRecipe
             // 
-            this.addRecipe.Location = new System.Drawing.Point(604, 9);
+            this.addRecipe.Location = new System.Drawing.Point(527, 8);
             this.addRecipe.Name = "addRecipe";
-            this.addRecipe.Size = new System.Drawing.Size(241, 42);
+            this.addRecipe.Size = new System.Drawing.Size(200, 42);
             this.addRecipe.TabIndex = 3;
             this.addRecipe.Text = "Добавить рецепт";
             this.addRecipe.UseVisualStyleBackColor = true;
@@ -94,12 +94,12 @@
             this.ProductType,
             this.ProductCount,
             this.Unit});
-            this.dataGridView1.Location = new System.Drawing.Point(12, 66);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 58);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(833, 309);
+            this.dataGridView1.Size = new System.Drawing.Size(724, 394);
             this.dataGridView1.TabIndex = 4;
             // 
             // ProductType
@@ -129,7 +129,6 @@
             // Recipe
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(857, 387);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.addRecipe);
             this.Controls.Add(this.cookButton);
@@ -138,7 +137,7 @@
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Recipe";
-            this.Text = "Recipe";
+            this.Size = new System.Drawing.Size(730, 455);
             this.Load += new System.EventHandler(this.Recipe_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

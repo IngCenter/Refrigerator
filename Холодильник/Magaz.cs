@@ -10,42 +10,65 @@ using System.Windows.Forms;
 
 namespace Fridgerator
 {
-    public partial class Magaz : Form
+    public partial class Magaz : UserControl
     {
         public Magaz()
         {
             InitializeComponent();
         }
 
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            Magaz f = new Magaz();
-            f.ShowDialog();
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-            Vstavni f = new Vstavni();
-            f.ShowDialog();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Kabelya f = new Kabelya();
-            f.ShowDialog();
-        }
-
-        private void button6_Click(object sender, EventArgs e)
-        {
-            Systemohlad f = new Systemohlad();
-            f.ShowDialog();
-        }
-
         private void button7_Click(object sender, EventArgs e)
         {
-            Datchicki f = new Datchicki();
-            f.ShowDialog();
+            Details f = new Details("Датчики");
+            panel1.Controls.Clear();
+            panel1.Controls.Add(f);
         }
+
+        private void Magaz_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void treeView1_AfterSelect_1(object sender, TreeViewEventArgs e)
+        {
+            UserControl rf = new Details(e.Node.Text);
+
+
+            panel1.Controls.Clear();
+            panel1.Controls.Add(rf);
+        }
+
+        private void HolodilnikiButton_Click(object sender, EventArgs e)
+        {
+            string category = ((Label)sender).Text;
+
+            panel1.Controls.Clear();
+            List<string> Details = Program.Select(
+                "SELECT Name, Description FROM Details" +
+                " WHERE category ='" + category + "'");
+            for (int i = 0; i < Details.Count; i += 2)
+            {
+                Label labelname = new Label();
+                labelname.Location = new Point(100 * i, 0);
+                labelname.Size = new Size(180, 40);
+                labelname.Margin = new Padding(4, 0, 4, 0);
+                labelname.TextAlign = ContentAlignment.MiddleCenter;
+                labelname.Text = Details[i];
+
+                panel1.Controls.Add(labelname);
+
+                Label labelDiscription = new Label();
+                labelDiscription.Location = new Point(100 * i, 40);
+                labelDiscription.Size = new Size(180,180);
+                labelDiscription.Margin = new Padding(4, 0, 4, 0);
+                labelDiscription.TextAlign = ContentAlignment.MiddleCenter;
+                labelDiscription.Text = Details[i + 1];
+
+                panel1.Controls.Add(labelDiscription);
+            }
+
+        }
+
     }
 }

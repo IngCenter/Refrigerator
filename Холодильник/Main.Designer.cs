@@ -28,16 +28,16 @@ namespace Fridgerator
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode9 = new System.Windows.Forms.TreeNode("Коментарии");
-            System.Windows.Forms.TreeNode treeNode10 = new System.Windows.Forms.TreeNode("Авторизация");
-            System.Windows.Forms.TreeNode treeNode11 = new System.Windows.Forms.TreeNode("Тех. обслуживание");
-            System.Windows.Forms.TreeNode treeNode12 = new System.Windows.Forms.TreeNode("Содержимое");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Коментарии");
+            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Авторизация");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Тех. обслуживание");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("Содержимое");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("Добавить продукты");
+            System.Windows.Forms.TreeNode treeNode6 = new System.Windows.Forms.TreeNode("Приготовить что-то");
+            System.Windows.Forms.TreeNode treeNode7 = new System.Windows.Forms.TreeNode("Магазин");
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.treeView1 = new System.Windows.Forms.TreeView();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -54,7 +54,6 @@ namespace Fridgerator
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::Fridgerator.Properties.Resources.Медведь;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(730, 455);
@@ -65,9 +64,6 @@ namespace Fridgerator
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.button1);
-            this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.treeView1);
             this.panel2.Location = new System.Drawing.Point(-1, 3);
             this.panel2.Name = "panel2";
@@ -75,57 +71,33 @@ namespace Fridgerator
             this.panel2.TabIndex = 11;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(13, 159);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(133, 33);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Магазин";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Non_tree_Sad);
-            // 
-            // button5
-            // 
-            this.button5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(13, 120);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(133, 33);
-            this.button5.TabIndex = 3;
-            this.button5.Text = "Приготовить что-то";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.Non_tree_Recipe);
-            // 
-            // button3
-            // 
-            this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(13, 81);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(133, 33);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Добавить Продукты";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.Non_tree_Products);
-            // 
             // treeView1
             // 
             this.treeView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.treeView1.Location = new System.Drawing.Point(3, 3);
             this.treeView1.Name = "treeView1";
-            treeNode9.Name = "VisualComents";
-            treeNode9.Text = "Коментарии";
-            treeNode10.Name = "Узел5";
-            treeNode10.Text = "Авторизация";
-            treeNode11.Name = "Узел6";
-            treeNode11.Text = "Тех. обслуживание";
-            treeNode12.Name = "Contents";
-            treeNode12.Text = "Содержимое";
+            treeNode1.Name = "VisualComents";
+            treeNode1.Text = "Коментарии";
+            treeNode2.Name = "Узел5";
+            treeNode2.Text = "Авторизация";
+            treeNode3.Name = "Узел6";
+            treeNode3.Text = "Тех. обслуживание";
+            treeNode4.Name = "Contents";
+            treeNode4.Text = "Содержимое";
+            treeNode5.Name = "абабаба";
+            treeNode5.Text = "Добавить продукты";
+            treeNode6.Name = "гыгыгы";
+            treeNode6.Text = "Приготовить что-то";
+            treeNode7.Name = "magazinchik";
+            treeNode7.Text = "Магазин";
             this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode9,
-            treeNode10,
-            treeNode11,
-            treeNode12});
+            treeNode1,
+            treeNode2,
+            treeNode3,
+            treeNode4,
+            treeNode5,
+            treeNode6,
+            treeNode7});
             this.treeView1.Size = new System.Drawing.Size(149, 452);
             this.treeView1.TabIndex = 0;
             this.treeView1.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.treeView1_AfterSelect);
@@ -153,10 +125,7 @@ namespace Fridgerator
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TreeView treeView1;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button button1;
     }
 }
 

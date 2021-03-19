@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace Fridgerator
 {
-    public partial class Recipe : Form
+    public partial class Recipe : UserControl
     {
         public Recipe()
         {

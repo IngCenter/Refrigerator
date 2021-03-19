@@ -7,7 +7,6 @@ C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridg
 C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.Main.resources
 C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.Contents.resources
 C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.Condition.resources
-C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.CookingRecipes.resources
 C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Холодильник.csproj.GenerateResource.cache
 C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Холодильник.csproj.CoreCompileInputs.cache
 C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Холодильник.csproj.CopyComplete
@@ -44,3 +43,5 @@ C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridg
 C:\Users\Даниел\source\repos\Refrigerator\Холодильник\obj\Debug\Fridgerator.VisualComents.resources
 C:\Users\Даниел\source\repos\Refrigerator\Холодильник\obj\Debug\Fridgerator.Autarization.resources
 C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.Autarization.resources
+C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.Magaz.resources
+C:\Users\beavi\Downloads\git\Refrigerator\Холодильник\obj\Debug\Fridgerator.Details.resources
